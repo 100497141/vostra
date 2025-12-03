@@ -1,162 +1,371 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <title>VOSTRA · Demo OTT</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-  <div class="app">
-    <!-- HEADER -->
-    <header class="topbar">
-      <div class="topbar-left">
-        <div class="logo">
-          <!-- Aquí puedes meter el SVG del logo real si quieres -->
-          <span class="logo-icon">☼</span>
-          <span class="logo-text">VOSTRA</span>
-        </div>
-        <nav class="nav">
-          <a href="#" class="nav-link nav-link--active">Inicio</a>
-          <a href="#" class="nav-link">En Directo</a>
-          <a href="#" class="nav-link">Series</a>
-          <a href="#" class="nav-link">Películas</a>
-          <a href="#" class="nav-link">Magazine</a>
-          <a href="#" class="nav-link">Fonoteca</a>
-        </nav>
-      </div>
-      <div class="topbar-right">
-        <button class="icon-btn" aria-label="Buscar">🔍</button>
-        <button class="icon-btn" aria-label="Perfil">👤</button>
-        <button class="icon-btn" aria-label="Ajustes">⚙️</button>
-      </div>
-    </header>
+:root {
+  --vostra-blue: #0a43d8;
+  --vostra-blue-alt: #2e5fae;
+  --vostra-black: #050814;
+  --vostra-bg: radial-gradient(circle at top left, #2e5fae 0, #0a43d8 40%, #050814 100%);
+  --radius-lg: 22px;
+  --radius-card: 18px;
+  --shadow-soft: 0 20px 40px rgba(0, 0, 0, 0.45);
+  --font-main: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
 
-    <!-- CONTENIDO PRINCIPAL -->
-    <main class="main">
-      <!-- HERO -->
-      <section class="hero">
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-          <h1 class="hero-title">LA RESIDENCIA</h1>
-          <p class="hero-subtitle">
-            El día a día en una residencia vista desde la experiencia y la emoción.
-          </p>
-          <div class="hero-actions">
-            <button class="btn btn-primary">▶ Reproducir</button>
-            <button class="btn btn-secondary">＋ Añadir a Mi Lista</button>
-          </div>
-        </div>
-      </section>
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
-      <!-- FILAS DE CONTENIDO -->
-      <section class="row">
-        <h2 class="row-title">En emisión hoy</h2>
-        <div class="row-cards">
-          <article class="card">
-            <div class="card-thumb card-thumb--placeholder"></div>
-            <div class="card-body">
-              <h3 class="card-title">Buenos Días, Vostra</h3>
-              <p class="card-meta">Nuevo hoy · Magazine</p>
-            </div>
-          </article>
-          <article class="card">
-            <div class="card-thumb card-thumb--placeholder"></div>
-            <div class="card-body">
-              <h3 class="card-title">Informativo VOSTRA</h3>
-              <p class="card-meta">Nuevo hoy · Noticiario</p>
-            </div>
-          </article>
-          <article class="card">
-            <div class="card-thumb card-thumb--placeholder"></div>
-            <div class="card-body">
-              <h3 class="card-title">La Residencia</h3>
-              <p class="card-meta">Nuevo hoy · Ficción</p>
-            </div>
-          </article>
-          <article class="card">
-            <div class="card-thumb card-thumb--placeholder"></div>
-            <div class="card-body">
-              <h3 class="card-title">El Talento Nunca Duerme</h3>
-              <p class="card-meta">Nuevo hoy · Talent show</p>
-            </div>
-          </article>
-        </div>
-      </section>
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: #000;
+  color: #fff;
+  font-family: var(--font-main);
+}
 
-      <section class="row">
-        <h2 class="row-title">Programas que te hacen compañía</h2>
-        <div class="row-cards">
-          <article class="card">
-            <div class="card-thumb card-thumb--placeholder"></div>
-            <div class="card-body">
-              <h3 class="card-title">Cuentos de Ayer</h3>
-              <p class="card-meta">Historias de vida</p>
-            </div>
-          </article>
-          <article class="card">
-            <div class="card-thumb card-thumb--placeholder"></div>
-            <div class="card-body">
-              <h3 class="card-title">La Partida</h3>
-              <p class="card-meta">Tardes de mesa y charla</p>
-            </div>
-          </article>
-          <article class="card">
-            <div class="card-thumb card-thumb--placeholder"></div>
-            <div class="card-body">
-              <h3 class="card-title">Clases de Ejercicio</h3>
-              <p class="card-meta">Salud activa</p>
-            </div>
-          </article>
-          <article class="card">
-            <div class="card-thumb card-thumb--placeholder"></div>
-            <div class="card-body">
-              <h3 class="card-title">Breve Encuentro</h3>
-              <p class="card-meta">Encuentros y conversación</p>
-            </div>
-          </article>
-        </div>
-      </section>
+body {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+}
 
-      <section class="row">
-        <h2 class="row-title">Cine que siempre vuelve</h2>
-        <div class="row-cards">
-          <article class="card">
-            <div class="card-thumb card-thumb--placeholder"></div>
-            <div class="card-body">
-              <h3 class="card-title">Casablanca</h3>
-              <p class="card-meta">Cine clásico</p>
-            </div>
-          </article>
-          <article class="card">
-            <div class="card-thumb card-thumb--placeholder"></div>
-            <div class="card-body">
-              <h3 class="card-title">Cine del Recuerdo</h3>
-              <p class="card-meta">Selección VOSTRA</p>
-            </div>
-          </article>
-          <article class="card">
-            <div class="card-thumb card-thumb--placeholder"></div>
-            <div class="card-body">
-              <h3 class="card-title">Cine Nostalgia</h3>
-              <p class="card-meta">Décadas que nos marcaron</p>
-            </div>
-          </article>
-        </div>
-      </section>
-    </main>
+/* CONTENEDOR APP */
+.app {
+  width: 100%;
+  max-width: 1280px;
+  min-height: 100vh;
+  background: var(--vostra-bg);
+  display: flex;
+  flex-direction: column;
+}
 
-    <!-- FOOTER -->
-    <footer class="footer">
-      <div class="footer-left">Fonoteca · VOSTRA</div>
-      <div class="footer-right">
-        <a href="#">Accesibilidad</a>
-        <a href="#">Sobre VOSTRA</a>
-        <a href="#">Ayuda</a>
-        <a href="#">Contacto</a>
-        <a href="#">Ajustes</a>
-      </div>
-    </footer>
-  </div>
-</body>
-</html>
+/* TOPBAR */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 28px;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(18px);
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+.topbar-left {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-img {
+  height: 30px;
+  width: auto;
+}
+
+.logo-text {
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.nav {
+  display: flex;
+  gap: 18px;
+}
+
+.nav-link {
+  font-size: 14px;
+  text-decoration: none;
+  color: #d4e0ff;
+  padding-bottom: 4px;
+  border-bottom: 2px solid transparent;
+  font-weight: 500;
+}
+
+.nav-link--active {
+  color: #ffffff;
+  border-bottom-color: #ffffff;
+}
+
+.nav-link:hover {
+  color: #ffffff;
+}
+
+.topbar-right {
+  display: flex;
+  gap: 8px;
+}
+
+.icon-btn {
+  border: none;
+  background: rgba(0, 0, 0, 0.3);
+  color: #ffffff;
+  border-radius: 999px;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+
+/* MAIN */
+.main {
+  padding: 20px 28px 28px;
+  flex: 1;
+  overflow-y: auto;
+}
+
+/* HERO */
+.hero {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  min-height: 240px;
+  margin-bottom: 28px;
+  background-image: url("https://picsum.photos/seed/residencia-hero/1200/520");
+  background-size: cover;
+  background-position: center;
+  box-shadow: var(--shadow-soft);
+}
+
+.hero-gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(5, 8, 20, 0.9) 0%,
+    rgba(5, 8, 20, 0.7) 30%,
+    rgba(5, 8, 20, 0.2) 60%,
+    rgba(5, 8, 20, 0) 100%
+  );
+}
+
+.hero-content {
+  position: relative;
+  padding: 30px 32px;
+  max-width: 520px;
+}
+
+.hero-title {
+  font-size: 38px;
+  margin: 0 0 8px;
+  font-weight: 700;
+}
+
+.hero-subtitle {
+  margin: 0 0 20px;
+  font-size: 16px;
+  color: #e0e7ff;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.hero-small-btn {
+  position: absolute;
+  right: 28px;
+  bottom: 24px;
+  border-radius: 999px;
+  border: 1px solid #ffffff;
+  background: rgba(5, 8, 20, 0.5);
+  color: #ffffff;
+  padding: 8px 16px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+/* BOTONES */
+.btn {
+  border-radius: 999px;
+  border: none;
+  padding: 10px 22px;
+  font-size: 15px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn-primary {
+  background: #ffffff;
+  color: var(--vostra-blue);
+}
+
+.btn-primary:hover {
+  filter: brightness(0.95);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.9);
+}
+
+.btn-secondary:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+/* ROWS */
+.row {
+  margin-bottom: 26px;
+}
+
+.row-title {
+  font-size: 18px;
+  margin: 0 0 12px;
+  font-weight: 600;
+}
+
+.row-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 14px;
+}
+
+/* CARDS */
+.card {
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  background: transparent;
+  min-height: 160px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.35);
+}
+
+.card-thumb {
+  position: relative;
+  height: 130px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-end;
+}
+
+/* Degradado abajo */
+.card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(2, 6, 23, 0.95) 0%,
+    rgba(2, 6, 23, 0.6) 40%,
+    rgba(2, 6, 23, 0.1) 100%
+  );
+}
+
+.card-info {
+  position: relative;
+  padding: 10px 12px;
+}
+
+.card-title {
+  font-size: 14px;
+  margin: 0 0 2px;
+  font-weight: 600;
+}
+
+.card-meta {
+  font-size: 12px;
+  margin: 0;
+  color: #d2dcff;
+}
+
+/* FOTOS POR PROGRAMA */
+.thumb-buenos-dias {
+  background-image: url("https://picsum.photos/seed/buenosdias/600/340");
+}
+
+.thumb-informativo {
+  background-image: url("https://picsum.photos/seed/informativo/600/340");
+}
+
+.thumb-residencia {
+  background-image: url("https://picsum.photos/seed/residencia2/600/340");
+}
+
+.thumb-talento {
+  background-image: url("https://picsum.photos/seed/talento/600/340");
+}
+
+.thumb-cuentos {
+  background-image: url("https://picsum.photos/seed/cuentos/600/340");
+}
+
+.thumb-partida {
+  background-image: url("https://picsum.photos/seed/partida/600/340");
+}
+
+.thumb-ejercicio {
+  background-image: url("https://picsum.photos/seed/ejercicio/600/340");
+}
+
+.thumb-encuentro {
+  background-image: url("https://picsum.photos/seed/encuentro/600/340");
+}
+
+.thumb-casablanca {
+  background-image: url("https://picsum.photos/seed/casablanca/600/340");
+}
+
+.thumb-cine-recuerdo {
+  background-image: url("https://picsum.photos/seed/recuerdo/600/340");
+}
+
+.thumb-cine-nostalgia {
+  background-image: url("https://picsum.photos/seed/nostalgia/600/340");
+}
+
+.thumb-otrocine {
+  background-image: url("https://picsum.photos/seed/estelar/600/340");
+}
+
+/* FOOTER */
+.footer {
+  padding: 10px 24px 16px;
+  font-size: 12px;
+  color: #c2c8e5;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.footer-right a {
+  color: #c2c8e5;
+  text-decoration: none;
+  margin-left: 12px;
+}
+
+.footer-right a:hover {
+  text-decoration: underline;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .nav {
+    display: none;
+  }
+
+  .topbar {
+    padding-inline: 16px;
+  }
+
+  .main {
+    padding-inline: 16px;
+  }
+
+  .hero-content {
+    padding: 24px 20px;
+  }
+
+  .hero-title {
+    font-size: 28px;
+  }
+}
