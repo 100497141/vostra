@@ -25,6 +25,7 @@ body {
 }
 
 /* CONTENEDOR PRINCIPAL */
+
 .app {
   width: 100%;
   max-width: 1200px;
@@ -36,13 +37,14 @@ body {
 }
 
 /* TOPBAR */
+
 .topbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 14px 28px;
-  background: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(16px);
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(14px);
 }
 
 .topbar-left {
@@ -54,17 +56,17 @@ body {
 .logo {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
 }
 
 .logo-img {
-  height: 36px;
+  height: 34px;
 }
 
 .logo-text {
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 700;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.12em;
 }
 
 .nav {
@@ -74,11 +76,11 @@ body {
 
 .nav-link {
   color: #d4e0ff;
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 500;
   text-decoration: none;
   border-bottom: 2px solid transparent;
-  padding-bottom: 4px;
+  padding-bottom: 3px;
 }
 
 .nav-link--active {
@@ -92,17 +94,18 @@ body {
 }
 
 .icon-btn {
-  width: 40px;
-  height: 40px;
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
   border: none;
   background: rgba(255, 255, 255, 0.16);
   color: #ffffff;
-  font-size: 20px;
+  font-size: 18px;
   cursor: pointer;
 }
 
 /* FOCUS ACCESIBLE */
+
 a:focus,
 button:focus {
   outline: 3px solid #ffffff;
@@ -110,6 +113,7 @@ button:focus {
 }
 
 /* MAIN */
+
 .main {
   padding: 28px 28px 40px;
   flex: 1;
@@ -129,33 +133,28 @@ button:focus {
 .guia-subtitle {
   font-size: 18px;
   color: #e0e7ff;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 }
 
 /* TABLA */
+
 .guia-container {
   overflow-x: auto;
-  padding-bottom: 16px;
+  padding-bottom: 18px;
 }
 
 .guia-table {
   width: 100%;
-  border-collapse: separate;
-  border-spacing: 0;
-  background: rgba(0, 0, 0, 0.32);
-  border-radius: 18px;
-  overflow: hidden;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+  border-collapse: collapse;
 }
 
 .guia-table thead {
-  background: linear-gradient(90deg, rgba(255,255,255,0.18), rgba(255,255,255,0.06));
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
 }
 
 .guia-table th,
 .guia-table td {
-  padding: 12px 16px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+  padding: 10px 6px;
   text-align: left;
   font-size: 16px;
   vertical-align: top;
@@ -166,80 +165,73 @@ button:focus {
   font-size: 17px;
 }
 
-.guia-table tr:last-child td {
-  border-bottom: none;
-}
-
 .hora {
-  width: 170px;
+  width: 140px;
   font-weight: 600;
   color: #e3ecff;
-  background: rgba(255, 255, 255, 0.08);
 }
 
-/* BOTONES DE PROGRAMA */
+/* Separadores horizontales muy suaves */
+.guia-table tbody tr:not(:last-child) td {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+/* BOTONES DE PROGRAMA – ESTILO TEXTO */
+
 .prog-btn {
-  display: inline-flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 4px;
+  display: inline;
   border: none;
   background: transparent;
   color: #ffffff;
   font-family: inherit;
   font-size: 16px;
   text-align: left;
+  padding: 0;
   cursor: pointer;
-  padding: 6px 10px;
-  border-radius: 10px;
-  margin-bottom: 4px;
-  transition: background 0.15s ease, transform 0.1s ease;
+  margin: 0;
 }
 
 .prog-btn:hover {
-  background: rgba(255, 255, 255, 0.12);
-  transform: translateY(-1px);
+  text-decoration: underline;
 }
 
 .prog-btn--active {
-  background: rgba(255, 255, 255, 0.2);
+  text-decoration: underline;
+  font-weight: 600;
 }
 
-/* PILLS DE ORIGEN */
+/* ORIGEN (minimal, sin cajas) */
+
 .pill {
-  display: inline-block;
   font-size: 13px;
-  padding: 2px 8px;
-  border-radius: 999px;
-  margin-top: 2px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-left: 6px;
+  opacity: 0.8;
 }
 
 .pill-propia {
-  background: #16a34a;
-  color: #ffffff;
+  color: #8ef0b0;
 }
 
 .pill-adq {
-  background: #f97316;
-  color: #ffffff;
+  color: #ffd199;
 }
 
 .pill-mixto {
-  background: #6366f1;
-  color: #ffffff;
+  color: #c4c8ff;
 }
 
 /* PANEL DETALLE */
+
 .detalle {
-  margin-top: 28px;
-  padding: 18px 18px 20px;
-  background: rgba(0, 0, 0, 0.45);
-  border-radius: 18px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  margin-top: 30px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(255, 255, 255, 0.35);
 }
 
 .detalle-title {
-  font-size: 22px;
+  font-size: 24px;
   margin: 0 0 10px;
 }
 
@@ -254,9 +246,9 @@ button:focus {
 }
 
 .detalle-programa {
-  font-size: 19px;
+  font-size: 20px;
   font-weight: 600;
-  margin: 0 0 4px;
+  margin: 0 0 6px;
 }
 
 .detalle-origen {
@@ -275,6 +267,7 @@ button:focus {
 }
 
 /* FOOTER */
+
 .footer {
   padding: 14px 28px 20px;
   display: flex;
@@ -294,6 +287,7 @@ button:focus {
 }
 
 /* RESPONSIVE */
+
 @media (max-width: 800px) {
   .nav {
     display: none;
@@ -310,10 +304,10 @@ button:focus {
   .guia-table th,
   .guia-table td {
     font-size: 14px;
-    padding: 10px 10px;
+    padding: 8px 4px;
   }
 
   .hora {
-    width: 130px;
+    width: 110px;
   }
 }
