@@ -166,36 +166,51 @@ button:focus {
   color: #e3ecff;
 }
 
-/* líneas suaves */
+/* líneas suaves entre filas */
 .guia-table tbody tr:not(:last-child) td {
   border-bottom: 1px solid rgba(255, 255, 255, 0.12);
 }
 
-/* BOTONES DE PROGRAMA – ESTILO TEXTO */
+/* =========================
+   PROGRAMAS: ESTILO TEXTO
+   ========================= */
+
+/* Por si queda algo de estilos antiguos tipo “card” */
+.prog-card,
+.prog-btn {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+}
+
+/* Botón de programa tipo enlace de texto */
 .prog-btn {
   display: inline;
-  border: none;
-  background: transparent;
   color: #ffffff;
   font-family: inherit;
   font-size: 16px;
   text-align: left;
   padding: 0;
-  cursor: pointer;
   margin: 0;
+  cursor: pointer;
+}
+
+.prog-btn + .prog-btn {
+  margin-top: 4px;
 }
 
 .prog-btn:hover {
   text-decoration: underline;
 }
 
-/* ORIGEN (minimal) */
+/* Pills de origen: solo texto de color, sin caja */
 .pill {
   font-size: 13px;
   text-transform: uppercase;
   letter-spacing: 0.06em;
   margin-left: 6px;
-  opacity: 0.8;
+  opacity: 0.85;
 }
 
 .pill-propia {
@@ -210,7 +225,10 @@ button:focus {
   color: #c4c8ff;
 }
 
-/* MODAL */
+/* =========================
+   MODAL (POP-UP)
+   ========================= */
+
 .modal-backdrop {
   position: fixed;
   inset: 0;
@@ -235,9 +253,9 @@ button:focus {
 .modal-title {
   font-size: 22px;
   margin: 0 0 6px;
+  font-weight: 600;
 }
 
-/* NUEVO: meta (hora + origen) */
 .modal-meta {
   font-size: 15px;
   color: #c5cff5;
@@ -260,7 +278,7 @@ button:focus {
   cursor: pointer;
 }
 
-/* UTILIDADES */
+/* UTILIDAD */
 .hidden {
   display: none;
 }
@@ -308,4 +326,3 @@ button:focus {
     width: 120px;
   }
 }
-
