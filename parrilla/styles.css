@@ -24,7 +24,7 @@ body {
   line-height: 1.5;
 }
 
-/* APP CONTAINER */
+/* CONTENEDOR PRINCIPAL */
 .app {
   width: 100%;
   max-width: 1200px;
@@ -41,14 +41,14 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 14px 28px;
-  background: rgba(0, 0, 0, 0.65);
-  backdrop-filter: blur(14px);
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(16px);
 }
 
 .topbar-left {
   display: flex;
   align-items: center;
-  gap: 32px;
+  gap: 28px;
 }
 
 .logo {
@@ -69,7 +69,7 @@ body {
 
 .nav {
   display: flex;
-  gap: 20px;
+  gap: 18px;
 }
 
 .nav-link {
@@ -88,21 +88,21 @@ body {
 
 .topbar-right {
   display: flex;
-  gap: 10px;
+  gap: 8px;
 }
 
 .icon-btn {
   width: 40px;
   height: 40px;
-  background: rgba(255, 255, 255, 0.16);
-  border: none;
   border-radius: 50%;
-  cursor: pointer;
+  border: none;
+  background: rgba(255, 255, 255, 0.16);
   color: #ffffff;
   font-size: 20px;
+  cursor: pointer;
 }
 
-/* FOCUS PARA ACCESIBILIDAD */
+/* FOCUS ACCESIBLE */
 a:focus,
 button:focus {
   outline: 3px solid #ffffff;
@@ -115,130 +115,163 @@ button:focus {
   flex: 1;
 }
 
-.parrilla-main {
-  max-width: 1000px;
+.guia-main {
+  max-width: 1100px;
   margin: 0 auto;
 }
 
-.parrilla-title {
-  font-size: 28px;
+.guia-title {
+  font-size: 32px;
   font-weight: 700;
   margin-bottom: 6px;
 }
 
-.parrilla-subtitle {
+.guia-subtitle {
   font-size: 18px;
   color: #e0e7ff;
-  margin-bottom: 22px;
+  margin-bottom: 20px;
 }
 
-/* TABS DE DÍA */
-.day-tabs {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-bottom: 22px;
+/* TABLA */
+.guia-container {
+  overflow-x: auto;
+  padding-bottom: 16px;
 }
 
-.day-tab {
-  border-radius: 999px;
-  border: 2px solid #ffffff;
-  background: transparent;
-  color: #ffffff;
-  padding: 8px 18px;
-  font-size: 16px;
-  cursor: pointer;
+.guia-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: rgba(0, 0, 0, 0.32);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
 }
 
-.day-tab.active {
-  background: #ffffff;
-  color: #0a43d8;
+.guia-table thead {
+  background: linear-gradient(90deg, rgba(255,255,255,0.18), rgba(255,255,255,0.06));
 }
 
-/* CONTENEDOR PARRILLAS */
-.parrilla-container {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-}
-
-.parrilla-dia {
-  display: none;
-}
-
-.parrilla-dia.active {
-  display: block;
-}
-
-.parrilla-dia-title {
-  font-size: 22px;
-  margin-bottom: 14px;
-}
-
-/* SLOTS / FRANJAS HORARIAS */
-.slot {
-  display: grid;
-  grid-template-columns: 150px 1fr;
-  gap: 18px;
+.guia-table th,
+.guia-table td {
   padding: 12px 16px;
-  background: rgba(0, 0, 0, 0.45);
-  border-radius: 16px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+  text-align: left;
+  font-size: 16px;
+  vertical-align: top;
 }
 
-.slot-time {
+.guia-table th {
   font-weight: 600;
   font-size: 17px;
-  color: #e5edff;
 }
 
-.slot-content {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
+.guia-table tr:last-child td {
+  border-bottom: none;
 }
 
-.slot-title {
-  font-size: 18px;
+.hora {
+  width: 170px;
   font-weight: 600;
+  color: #e3ecff;
+  background: rgba(255, 255, 255, 0.08);
 }
 
-.slot-desc {
+/* BOTONES DE PROGRAMA */
+.prog-btn {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  border: none;
+  background: transparent;
+  color: #ffffff;
+  font-family: inherit;
   font-size: 16px;
-  color: #e0e7ff;
+  text-align: left;
+  cursor: pointer;
+  padding: 6px 10px;
+  border-radius: 10px;
+  margin-bottom: 4px;
+  transition: background 0.15s ease, transform 0.1s ease;
 }
 
-/* TAGS */
-.slot-tags {
-  margin-top: 4px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
+.prog-btn:hover {
+  background: rgba(255, 255, 255, 0.12);
+  transform: translateY(-1px);
 }
 
-.slot-tag {
+.prog-btn--active {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* PILLS DE ORIGEN */
+.pill {
+  display: inline-block;
   font-size: 13px;
-  padding: 4px 10px;
+  padding: 2px 8px;
   border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  margin-top: 2px;
 }
 
-.slot-tag--propia {
+.pill-propia {
   background: #16a34a;
-  border-color: #16a34a;
   color: #ffffff;
 }
 
-.slot-tag--adq {
+.pill-adq {
   background: #f97316;
-  border-color: #f97316;
   color: #ffffff;
 }
 
-.slot-tag--mixto {
+.pill-mixto {
   background: #6366f1;
-  border-color: #6366f1;
   color: #ffffff;
+}
+
+/* PANEL DETALLE */
+.detalle {
+  margin-top: 28px;
+  padding: 18px 18px 20px;
+  background: rgba(0, 0, 0, 0.45);
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.detalle-title {
+  font-size: 22px;
+  margin: 0 0 10px;
+}
+
+.detalle-empty {
+  margin: 0;
+  font-size: 16px;
+  color: #c5cff5;
+}
+
+.detalle-card {
+  margin-top: 4px;
+}
+
+.detalle-programa {
+  font-size: 19px;
+  font-weight: 600;
+  margin: 0 0 4px;
+}
+
+.detalle-origen {
+  font-size: 15px;
+  color: #c5cff5;
+  margin: 0 0 10px;
+}
+
+.detalle-desc {
+  font-size: 16px;
+  margin: 0;
+}
+
+.hidden {
+  display: none;
 }
 
 /* FOOTER */
@@ -267,97 +300,20 @@ button:focus {
   }
 
   .main {
-    padding-inline: 16px;
+    padding: 24px 16px 32px;
   }
 
-  .slot {
-    grid-template-columns: 1fr;
-  }
-
-  .slot-time {
-    font-size: 16px;
-  }
-
-  .slot-title {
-    font-size: 17px;
-  }
-
-  .parrilla-main {
-    padding-inline: 4px;
-  }
-}
-/* ===============================
-   GUÍA TV SEMANAL – ESTILO TABLA
-   =============================== */
-
-.guia-main {
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-.guia-title {
-  font-size: 32px;
-  font-weight: 700;
-  margin-bottom: 6px;
-}
-
-.guia-subtitle {
-  font-size: 18px;
-  color: #e0e7ff;
-  margin-bottom: 20px;
-}
-
-.guia-container {
-  overflow-x: auto;
-  padding-bottom: 20px;
-}
-
-.guia-table {
-  width: 100%;
-  border-collapse: collapse;
-  background: rgba(0, 0, 0, 0.45);
-  border-radius: 16px;
-  overflow: hidden;
-}
-
-.guia-table thead {
-  background: rgba(255, 255, 255, 0.15);
-}
-
-.guia-table th,
-.guia-table td {
-  padding: 14px 16px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-  text-align: left;
-  font-size: 16px;
-}
-
-.guia-table th {
-  font-weight: 600;
-  font-size: 17px;
-}
-
-.hora {
-  width: 170px;
-  font-weight: 600;
-  color: #dce5ff;
-  background: rgba(255, 255, 255, 0.1);
-}
-
-.guia-table tr:last-child td {
-  border-bottom: none;
-}
-
-/* RESPONSIVE */
-@media (max-width: 700px) {
-  .hora {
-    width: 120px;
-    font-size: 14px;
+  .guia-main {
+    padding-inline: 0;
   }
 
   .guia-table th,
   .guia-table td {
     font-size: 14px;
-    padding: 10px 12px;
+    padding: 10px 10px;
+  }
+
+  .hora {
+    width: 130px;
   }
 }
