@@ -123,22 +123,20 @@ html, body {
   overflow: hidden;
   min-height: 260px;
   margin-bottom: 28px;
-  background-image: url("https://picsum.photos/seed/residencia/1200/520");
-  background-size: cover;
-  background-position: center;
+  /* HERO sin foto random: solo degradado corporativo */
+  background: linear-gradient(
+    135deg,
+    #050814 0%,
+    #0a43d8 40%,
+    #2e5fae 100%
+  );
   box-shadow: var(--shadow-soft);
 }
 
 .hero-gradient {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    90deg,
-    rgba(5, 8, 20, 0.9) 0%,
-    rgba(5, 8, 20, 0.7) 30%,
-    rgba(5, 8, 20, 0.2) 60%,
-    rgba(5, 8, 20, 0) 100%
-  );
+  background: radial-gradient(circle at 70% 50%, rgba(255,255,255,0.1), transparent 60%);
 }
 
 .hero-content {
@@ -230,13 +228,14 @@ html, body {
 .card-thumb {
   position: relative;
   height: 130px;
-  background-size: cover;
-  background-position: center;
   display: flex;
   align-items: flex-end;
 }
 
-.card-overlay {
+/* degradado común abajo para los textos */
+
+.card-thumb::before {
+  content: "";
   position: absolute;
   inset: 0;
   background: linear-gradient(
@@ -264,22 +263,39 @@ html, body {
   color: #d0dcff;
 }
 
-/* IMÁGENES DE LOS PROGRAMAS */
+/* “PALETAS” POR TIPO DE PROGRAMA EN VEZ DE FOTOS RANDOM */
 
-.thumb-buenos-dias { background-image: url("https://picsum.photos/seed/buenosdias/600/340"); }
-.thumb-informativo { background-image: url("https://picsum.photos/seed/informativo/600/340"); }
-.thumb-residencia { background-image: url("https://picsum.photos/seed/residencia2/600/340"); }
-.thumb-talento { background-image: url("https://picsum.photos/seed/talento/600/340"); }
+/* Magazine / compañía */
+.thumb-buenos-dias,
+.thumb-cuentos,
+.thumb-partida,
+.thumb-encuentro {
+  background: linear-gradient(135deg, #1cb5e0, #0a43d8);
+}
 
-.thumb-cuentos { background-image: url("https://picsum.photos/seed/cuentos/600/340"); }
-.thumb-partida { background-image: url("https://picsum.photos/seed/partida/600/340"); }
-.thumb-ejercicio { background-image: url("https://picsum.photos/seed/ejercicio/600/340"); }
-.thumb-encuentro { background-image: url("https://picsum.photos/seed/encuentro/600/340"); }
+/* Informativo / institucional */
+.thumb-informativo {
+  background: linear-gradient(135deg, #0f172a, #1e3a8a);
+}
 
-.thumb-casablanca { background-image: url("https://picsum.photos/seed/casablanca/600/340"); }
-.thumb-cine-recuerdo { background-image: url("https://picsum.photos/seed/recuerdo/600/340"); }
-.thumb-cine-nostalgia { background-image: url("https://picsum.photos/seed/nostalgia/600/340"); }
-thumb-otrocine { background-image: url("https://picsum.photos/seed/estelar/600/340"); }
+/* Ficción / series */
+.thumb-residencia,
+.thumb-talento {
+  background: linear-gradient(135deg, #7c3aed, #db2777);
+}
+
+/* Salud / ejercicio */
+.thumb-ejercicio {
+  background: linear-gradient(135deg, #16a34a, #0f766e);
+}
+
+/* Cine / nostalgia */
+.thumb-casablanca,
+.thumb-cine-recuerdo,
+.thumb-cine-nostalgia,
+.thumb-otrocine {
+  background: linear-gradient(135deg, #f59e0b, #b45309);
+}
 
 /* FOOTER */
 
@@ -299,4 +315,28 @@ thumb-otrocine { background-image: url("https://picsum.photos/seed/estelar/600/3
 
 .footer-right a:hover {
   text-decoration: underline;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+  .nav {
+    display: none;
+  }
+
+  .topbar {
+    padding-inline: 16px;
+  }
+
+  .main {
+    padding-inline: 16px;
+  }
+
+  .hero-content {
+    padding: 24px 20px;
+  }
+
+  .hero-title {
+    font-size: 28px;
+  }
 }
