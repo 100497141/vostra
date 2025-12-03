@@ -41,7 +41,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 10px 24px;
-  background: rgba(0, 0, 0, 0.55);
+  background: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(14px);
 }
 
@@ -60,7 +60,7 @@ body {
 }
 
 .logo-img {
-  height: 32px;
+  height: 30px;
 }
 
 .logo-text {
@@ -118,7 +118,7 @@ button:focus {
   color: #e0e7ff;
 }
 
-/* TABLA */
+/* TABLA PRINCIPAL (estilo guía TV minimal) */
 .guia-container {
   overflow-x: auto;
 }
@@ -150,39 +150,49 @@ button:focus {
   color: #e3ecff;
 }
 
-/* líneas suaves */
+/* líneas horizontales suaves */
 .guia-table tbody tr:not(:last-child) td {
   border-bottom: 1px solid rgba(255, 255, 255, 0.14);
 }
 
-/* PROGRAMAS */
+/* resalte suave al pasar el ratón por la fila */
+.guia-table tbody tr:hover td {
+  background: rgba(5, 8, 20, 0.45);
+  transition: background 0.15s ease-out;
+}
+
+/* PROGRAMAS (botones de texto) */
 .prog-btn {
-  display: inline;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 6px;
   border: none;
   background: transparent;
   color: #ffffff;
   font-family: inherit;
   font-size: 15px;
   text-align: left;
-  padding: 0;
+  padding: 2px 4px;
   margin: 2px 0;
   cursor: pointer;
+  border-radius: 999px;
+  transition: background 0.15s ease-out, transform 0.1s ease-out;
 }
 
 .prog-btn:hover {
-  text-decoration: underline;
+  background: rgba(255, 255, 255, 0.08);
+  text-decoration: none;
 }
 
 .prog-multi .prog-btn {
   display: block;
 }
 
-/* ORIGEN */
+/* ETIQUETA DE ORIGEN */
 .pill {
   font-size: 11px;
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  margin-left: 6px;
   opacity: 0.9;
 }
 
@@ -198,7 +208,7 @@ button:focus {
   color: #c4c8ff;
 }
 
-/* MODAL */
+/* MODAL (popup) */
 .modal-backdrop {
   position: fixed;
   inset: 0;
@@ -247,7 +257,7 @@ button:focus {
   cursor: pointer;
 }
 
-/* UTIL */
+/* UTILIDAD */
 .hidden {
   display: none;
 }
