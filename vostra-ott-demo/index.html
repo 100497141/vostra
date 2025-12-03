@@ -1,199 +1,281 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>VOSTRA – Plataforma</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VOSTRA – Plataforma OTT</title>
 
-    <!-- Montserrat -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <!-- Montserrat -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
-    <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
 <div class="app">
 
-    <!-- TOPBAR -->
-    <header class="topbar">
-        <div class="topbar-left">
-            <div class="logo">
-                <img src="logosvostra.jpeg" alt="Logo VOSTRA" class="logo-img" />
-                <span class="logo-text">VOSTRA</span>
-            </div>
+  <!-- TOPBAR -->
+  <header class="topbar">
+    <div class="topbar-left">
+      <a href="index.html" class="logo">
+        <img src="logosvostra.jpeg" alt="Logo VOSTRA" class="logo-img" />
+        <span class="logo-text">VOSTRA</span>
+      </a>
 
-            <nav class="nav" aria-label="Navegación principal">
-                <a href="#" class="nav-link nav-link--active">Inicio</a>
-                <a href="#" class="nav-link">En Directo</a>
-                <a href="#" class="nav-link">Series</a>
-                <a href="#" class="nav-link">Películas</a>
-                <a href="#" class="nav-link">Magazine</a>
-                <a href="#" class="nav-link">Fonoteca</a>
-            </nav>
+      <nav class="nav" aria-label="Navegación principal">
+        <a href="index.html" class="nav-link nav-link--active">Inicio</a>
+        <a href="#" class="nav-link">Ver en directo</a>
+        <a href="#continuar" class="nav-link">Continuar</a>
+        <a href="#series" class="nav-link">Series</a>
+        <a href="#cine" class="nav-link">Cine</a>
+      </nav>
+    </div>
+
+    <div class="topbar-right">
+      <button class="icon-btn" aria-label="Buscar">🔍</button>
+      <button class="icon-btn" aria-label="Ajustes de accesibilidad">⚙️</button>
+      <button class="icon-btn" aria-label="Perfil de usuario">👤</button>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main class="main">
+
+    <!-- HERO · LA RESIDENCIA -->
+    <section class="hero" aria-label="Destacado: La Residencia">
+      <div class="hero-gradient"></div>
+
+      <div class="hero-content">
+        <p class="hero-tag">Destacado de hoy · Serie diaria</p>
+        <h1 class="hero-title">LA RESIDENCIA</h1>
+        <p class="hero-subtitle">
+          El día a día en una residencia vista desde la experiencia y la emoción.
+          Ritmo calmado, personajes cercanos y capítulos pensados para ver en compañía.
+        </p>
+
+        <div class="hero-meta">
+          <span>Subtítulos grandes</span>
+          <span>Volumen suave</span>
+          <span>Reproducción automática opcional</span>
         </div>
 
-        <div class="topbar-right">
-            <button class="icon-btn" aria-label="Buscar">🔍</button>
-            <button class="icon-btn" aria-label="Perfil">👤</button>
-            <button class="icon-btn" aria-label="Ajustes">⚙️</button>
+        <div class="hero-actions">
+          <button class="btn btn-primary" aria-label="Reproducir La Residencia">▶ Reproducir</button>
+          <button class="btn btn-secondary" aria-label="Añadir La Residencia a Mi Lista">+ Añadir a Mi Lista</button>
         </div>
-    </header>
+      </div>
 
-    <!-- MAIN -->
-    <main class="main">
+      <button class="hero-small-btn" aria-label="Ver La Residencia desde el inicio">Ver desde el inicio</button>
+    </section>
 
-        <!-- HERO -->
-        <section class="hero" aria-label="Destacado: La Residencia">
-            <div class="hero-gradient"></div>
-            <div class="hero-content">
-                <h1 class="hero-title">LA RESIDENCIA</h1>
-                <p class="hero-subtitle">El día a día en una residencia vista desde la experiencia y la emoción.</p>
+    <!-- FILA 1 · SIGUE TU DÍA CON VOSTRA (EMISIÓN DE HOY) -->
+    <section class="row" aria-labelledby="row-dia">
+      <div class="row-header">
+        <h2 class="row-title" id="row-dia">Sigue tu día con VOSTRA</h2>
+        <p class="row-subtitle">Emisión de hoy · El directo de la cadena trasladado a la OTT.</p>
+      </div>
 
-                <div class="hero-actions">
-                    <button class="btn btn-primary" aria-label="Reproducir La Residencia">▶ Reproducir</button>
-                    <button class="btn btn-secondary" aria-label="Añadir La Residencia a Mi Lista">+ Añadir a Mi Lista</button>
-                </div>
+      <div class="row-cards">
+
+        <article class="card">
+          <div class="card-thumb thumb-buenos-dias" role="img" aria-label="Buenos Días, VOSTRA"></div>
+          <div class="card-info">
+            <h3 class="card-title">Buenos Días, VOSTRA</h3>
+            <p class="card-meta">Magazine · Mañanas amables</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-thumb thumb-informativo" role="img" aria-label="Informativo VOSTRA"></div>
+          <div class="card-info">
+            <h3 class="card-title">Informativo VOSTRA</h3>
+            <p class="card-meta">Noticiario · Actualidad calmada</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-thumb thumb-residencia" role="img" aria-label="La Residencia"></div>
+          <div class="card-info">
+            <h3 class="card-title">La Residencia</h3>
+            <p class="card-meta">Ficción · Serie diaria</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-thumb thumb-conectados" role="img" aria-label="Conectados"></div>
+          <div class="card-info">
+            <h3 class="card-title">Conectados</h3>
+            <p class="card-meta">Factual · Servicio digital</p>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- FILA 2 · CONTINUAR VIENDO -->
+    <section class="row" id="continuar" aria-labelledby="row-continuar">
+      <div class="row-header">
+        <h2 class="row-title" id="row-continuar">Continuar viendo</h2>
+        <p class="row-subtitle">Retoma fácilmente lo que dejaste a medias.</p>
+      </div>
+
+      <div class="row-cards">
+
+        <article class="card card-continue">
+          <div class="card-thumb thumb-residencia" role="img" aria-label="La Residencia"></div>
+          <div class="card-info">
+            <h3 class="card-title">La Residencia · T1 · Capítulo 5</h3>
+            <p class="card-meta">Reanudar desde el minuto 18</p>
+            <div class="card-progress" aria-hidden="true">
+              <div class="card-progress-bar" style="width: 60%;"></div>
             </div>
+          </div>
+        </article>
 
-            <button class="hero-small-btn" aria-label="Ver desde el inicio">Ver desde el inicio</button>
-        </section>
-
-        <!-- BLOQUE 1 -->
-        <section class="row">
-            <h2 class="row-title">En emisión hoy</h2>
-
-            <div class="row-cards">
-
-                <article class="card">
-                    <div class="card-thumb thumb-buenos-dias"></div>
-                    <div class="card-info">
-                        <h3 class="card-title">Buenos Días, Vostra</h3>
-                        <p class="card-meta">Nuevo hoy · Magazine</p>
-                    </div>
-                </article>
-
-                <article class="card">
-                    <div class="card-thumb thumb-informativo"></div>
-                    <div class="card-info">
-                        <h3 class="card-title">Informativo VOSTRA</h3>
-                        <p class="card-meta">Nuevo hoy · Noticiario</p>
-                    </div>
-                </article>
-
-                <article class="card">
-                    <div class="card-thumb thumb-residencia"></div>
-                    <div class="card-info">
-                        <h3 class="card-title">La Residencia</h3>
-                        <p class="card-meta">Nuevo hoy · Ficción</p>
-                    </div>
-                </article>
-
-                <article class="card">
-                    <div class="card-thumb thumb-talento"></div>
-                    <div class="card-info">
-                        <h3 class="card-title">El Talento Nunca Duerme</h3>
-                        <p class="card-meta">Nuevo hoy · Talent show</p>
-                    </div>
-                </article>
-
+        <article class="card card-continue">
+          <div class="card-thumb thumb-cuentos" role="img" aria-label="Cuentos de Ayer"></div>
+          <div class="card-info">
+            <h3 class="card-title">Cuentos de Ayer</h3>
+            <p class="card-meta">Historias de vida · Episodio 2</p>
+            <div class="card-progress">
+              <div class="card-progress-bar" style="width: 40%;"></div>
             </div>
-        </section>
+          </div>
+        </article>
 
-        <!-- BLOQUE 2 -->
-        <section class="row">
-            <h2 class="row-title">Programas que te hacen compañía</h2>
-
-            <div class="row-cards">
-
-                <article class="card">
-                    <div class="card-thumb thumb-cuentos"></div>
-                    <div class="card-info">
-                        <h3 class="card-title">Cuentos de Ayer</h3>
-                        <p class="card-meta">Historias de vida</p>
-                    </div>
-                </article>
-
-                <article class="card">
-                    <div class="card-thumb thumb-partida"></div>
-                    <div class="card-info">
-                        <h3 class="card-title">La Partida</h3>
-                        <p class="card-meta">Tardes de mesa y charla</p>
-                    </div>
-                </article>
-
-                <article class="card">
-                    <div class="card-thumb thumb-ejercicio"></div>
-                    <div class="card-info">
-                        <h3 class="card-title">Clases de Ejercicio</h3>
-                        <p class="card-meta">Salud activa</p>
-                    </div>
-                </article>
-
-                <article class="card">
-                    <div class="card-thumb thumb-encuentro"></div>
-                    <div class="card-info">
-                        <h3 class="card-title">Breve Encuentro</h3>
-                        <p class="card-meta">Conversaciones reales</p>
-                    </div>
-                </article>
-
+        <article class="card card-continue" id="cine">
+          <div class="card-thumb thumb-casablanca" role="img" aria-label="Casablanca"></div>
+          <div class="card-info">
+            <h3 class="card-title">Casablanca</h3>
+            <p class="card-meta">Cine clásico · Reanudar película</p>
+            <div class="card-progress">
+              <div class="card-progress-bar" style="width: 30%;"></div>
             </div>
-        </section>
+          </div>
+        </article>
 
-        <!-- BLOQUE 3 -->
-        <section class="row">
-            <h2 class="row-title">Cine que siempre vuelve</h2>
-
-            <div class="row-cards">
-
-                <article class="card">
-                    <div class="card-thumb thumb-casablanca"></div>
-                    <div class="card-info">
-                        <h3 class="card-title">Casablanca</h3>
-                        <p class="card-meta">Cine clásico</p>
-                    </div>
-                </article>
-
-                <article class="card">
-                    <div class="card-thumb thumb-cine-recuerdo"></div>
-                    <div class="card-info">
-                        <h3 class="card-title">Cine del Recuerdo</h3>
-                        <p class="card-meta">Selección VOSTRA</p>
-                    </div>
-                </article>
-
-                <article class="card">
-                    <div class="card-thumb thumb-cine-nostalgia"></div>
-                    <div class="card-info">
-                        <h3 class="card-title">Cine Nostalgia</h3>
-                        <p class="card-meta">Décadas que nos marcaron</p>
-                    </div>
-                </article>
-
-                <article class="card">
-                    <div class="card-thumb thumb-otrocine"></div>
-                    <div class="card-info">
-                        <h3 class="card-title">Cine Estelar</h3>
-                        <p class="card-meta">Sesión de sábado</p>
-                    </div>
-                </article>
-
+        <article class="card card-continue">
+          <div class="card-thumb thumb-ejercicio" role="img" aria-label="Clases de Ejercicio"></div>
+          <div class="card-info">
+            <h3 class="card-title">Clases de Ejercicio</h3>
+            <p class="card-meta">Sesión suave · 12 minutos vistos</p>
+            <div class="card-progress">
+              <div class="card-progress-bar" style="width: 50%;"></div>
             </div>
-        </section>
+          </div>
+        </article>
 
-    </main>
+      </div>
+    </section>
 
-    <!-- FOOTER -->
-    <footer class="footer">
-        <div class="footer-left">Fonoteca · VOSTRA</div>
-        <div class="footer-right">
-            <a href="#">Accesibilidad</a>
-            <a href="#">Sobre VOSTRA</a>
-            <a href="#">Ayuda</a>
-            <a href="#">Contacto</a>
-            <a href="#">Ajustes</a>
-        </div>
-    </footer>
+    <!-- FILA 3 · PROGRAMAS QUE TE HACEN COMPAÑÍA -->
+    <section class="row" aria-labelledby="row-compania">
+      <div class="row-header">
+        <h2 class="row-title" id="row-compania">Programas que te hacen compañía</h2>
+        <p class="row-subtitle">Selección personalizada de programas que encajan con tus gustos.</p>
+      </div>
+
+      <div class="row-cards">
+
+        <article class="card">
+          <div class="card-thumb thumb-cuentos" role="img" aria-label="Cuentos de Ayer"></div>
+          <div class="card-info">
+            <h3 class="card-title">Cuentos de Ayer</h3>
+            <p class="card-meta">Historias de vida</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-thumb thumb-partida" role="img" aria-label="La Partida"></div>
+          <div class="card-info">
+            <h3 class="card-title">La Partida</h3>
+            <p class="card-meta">Tardes de mesa y charla</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-thumb thumb-ejercicio" role="img" aria-label="Clases de Ejercicio"></div>
+          <div class="card-info">
+            <h3 class="card-title">Clases de Ejercicio</h3>
+            <p class="card-meta">Salud activa</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-thumb thumb-encuentro" role="img" aria-label="Breve Encuentro"></div>
+          <div class="card-info">
+            <h3 class="card-title">Breve Encuentro</h3>
+            <p class="card-meta">Encuentros y conversación</p>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- FILA 4 · CATÁLOGO POR GÉNEROS -->
+    <section class="row" id="series" aria-labelledby="row-generos">
+      <div class="row-header">
+        <h2 class="row-title" id="row-generos">Explora por géneros</h2>
+        <p class="row-subtitle">Todo el catálogo de VOSTRA organizado para que encuentres rápido lo que buscas.</p>
+      </div>
+
+      <div class="genres-grid">
+        <article class="genre-card">
+          <h3 class="genre-title">Aprendemos juntos</h3>
+          <p class="genre-desc">Tecnología útil, tutoriales y vídeos explicativos de la propia plataforma.</p>
+        </article>
+
+        <article class="genre-card">
+          <h3 class="genre-title">Ficción diaria</h3>
+          <p class="genre-desc">Series diarias de VOSTRA y ficciones clásicas adaptadas.</p>
+        </article>
+
+        <article class="genre-card">
+          <h3 class="genre-title">Filmoteca</h3>
+          <p class="genre-desc">Cine clásico digitalizado y restaurado.</p>
+        </article>
+
+        <article class="genre-card">
+          <h3 class="genre-title">Series históricas</h3>
+          <p class="genre-desc">Grandes producciones de época europeas y españolas.</p>
+        </article>
+
+        <article class="genre-card">
+          <h3 class="genre-title">Factual</h3>
+          <p class="genre-desc">Documentales, territorio, memoria oral y servicio público.</p>
+        </article>
+
+        <article class="genre-card">
+          <h3 class="genre-title">Hogar</h3>
+          <p class="genre-desc">Cocina, jardinería fácil y decoración práctica.</p>
+        </article>
+
+        <article class="genre-card">
+          <h3 class="genre-title">Música y espectáculos</h3>
+          <p class="genre-desc">Conciertos, galas y eventos culturales grabados.</p>
+        </article>
+
+        <article class="genre-card">
+          <h3 class="genre-title">Fonoteca</h3>
+          <p class="genre-desc">Archivo sonoro y música nostálgica, sello propio de VOSTRA.</p>
+        </article>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-left">Fonoteca · VOSTRA</div>
+    <div class="footer-right">
+      <a href="#">Accesibilidad</a>
+      <a href="#">Sobre VOSTRA</a>
+      <a href="#">Ayuda</a>
+      <a href="#">Contacto</a>
+      <a href="#">Ajustes</a>
+    </div>
+  </footer>
+
 </div>
 </body>
 </html>
