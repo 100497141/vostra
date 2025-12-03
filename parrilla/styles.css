@@ -149,7 +149,7 @@ button:focus {
 
 .guia-table th,
 .guia-table td {
-  padding: 12px 10px;
+  padding: 10px 6px;
   text-align: left;
   font-size: 16px;
   vertical-align: top;
@@ -166,75 +166,59 @@ button:focus {
   color: #e3ecff;
 }
 
-/* líneas suaves */
+/* líneas suaves entre filas */
 .guia-table tbody tr:not(:last-child) td {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
 }
 
-/* TARJETAS DE PROGRAMA */
+/* BOTONES DE PROGRAMA – ESTILO TEXTO (ANTES “prog-btn”) */
 
 .prog-card {
-  display: block;
-  width: 100%;
-  text-align: left;
-  padding: 10px 14px 12px;
-  margin-bottom: 8px;
-  border-radius: 18px;
-  border: 2px solid rgba(255, 255, 255, 0.8);
-  background: rgba(36, 64, 136, 0.9);
-  position: relative;
-  cursor: pointer;
-  font-family: inherit;
+  display: inline;
+  border: none;
+  background: transparent;
   color: #ffffff;
-  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.4);
-}
-
-.prog-card::before {
-  content: "";
-  position: absolute;
-  inset: 4px;
-  border-radius: 14px;
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  pointer-events: none;
+  font-family: inherit;
+  font-size: 16px;
+  text-align: left;
+  padding: 0;
+  cursor: pointer;
+  margin: 0;
 }
 
 .prog-card:hover {
-  filter: brightness(1.05);
-  transform: translateY(-1px);
+  text-decoration: underline;
 }
 
+/* TEXTO PRINCIPAL DE LA LÍNEA */
 .card-line {
-  display: block;
   font-size: 16px;
   font-weight: 500;
-  margin-bottom: 4px;
 }
 
-/* PILLS */
+/* PILLS DE ORIGEN (solo texto de color, sin cajas) */
 
 .pill {
-  display: inline-block;
   font-size: 13px;
-  padding: 3px 10px;
-  border-radius: 999px;
-  background: #6366f1;
-  color: #ffffff;
-  margin-top: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-left: 6px;
+  opacity: 0.85;
 }
 
 .pill-propia {
-  background: #3abf78;
+  color: #8ef0b0;
 }
 
 .pill-adq {
-  background: #f59e0b;
+  color: #ffd199;
 }
 
 .pill-mixto {
-  background: #6366f1;
+  color: #c4c8ff;
 }
 
-/* MODAL */
+/* MODAL (POP-UP) */
 
 .modal-backdrop {
   position: fixed;
@@ -249,8 +233,8 @@ button:focus {
 .modal {
   position: relative;
   background: #050814;
-  border-radius: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
   padding: 24px 26px 22px;
   max-width: 480px;
   width: 90%;
@@ -310,7 +294,7 @@ button:focus {
 }
 
 /* RESPONSIVE */
-@media (max-width: 900px) {
+@media (max-width: 800px) {
   .nav {
     display: none;
   }
@@ -326,7 +310,7 @@ button:focus {
   .guia-table th,
   .guia-table td {
     font-size: 14px;
-    padding: 10px 6px;
+    padding: 8px 4px;
   }
 
   .hora {
