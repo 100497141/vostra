@@ -5,7 +5,7 @@
   --font-main: "Montserrat", system-ui, sans-serif;
 }
 
-/* RESET BÁSICO */
+/* RESET */
 *,
 *::before,
 *::after {
@@ -17,16 +17,19 @@ body {
   margin: 0;
   padding: 0;
   height: 100%;
-  font-family: var(--font-main);
   background: #000;
   color: #fff;
+  font-family: var(--font-main);
+  font-size: 16px;
+  line-height: 1.5;
 }
 
-/* CONTENEDOR GENERAL */
+/* CONTENEDOR PRINCIPAL */
 .app {
-  min-height: 100vh;
+  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
+  min-height: 100vh;
   background: radial-gradient(circle at top left, #2e5fae 0%, #0a43d8 40%, #050814 100%);
   display: flex;
   flex-direction: column;
@@ -37,8 +40,8 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 12px 24px;
-  background: rgba(0, 0, 0, 0.5);
+  padding: 10px 24px;
+  background: rgba(0, 0, 0, 0.55);
   backdrop-filter: blur(14px);
 }
 
@@ -61,9 +64,9 @@ body {
 }
 
 .logo-text {
+  font-size: 18px;
   font-weight: 700;
   letter-spacing: 0.12em;
-  font-size: 18px;
 }
 
 .nav {
@@ -72,11 +75,12 @@ body {
 }
 
 .nav-link {
-  font-size: 15px;
   color: #d4e0ff;
+  font-size: 15px;
+  font-weight: 500;
   text-decoration: none;
-  padding-bottom: 2px;
   border-bottom: 2px solid transparent;
+  padding-bottom: 2px;
 }
 
 .nav-link--active {
@@ -102,77 +106,163 @@ button:focus {
   margin: 0 auto;
 }
 
-.guia-header {
-  margin-bottom: 24px;
-}
-
 .guia-title {
-  font-size: 32px;
-  margin: 0 0 6px;
+  font-size: 30px;
+  font-weight: 700;
+  margin: 0 0 4px;
 }
 
 .guia-subtitle {
-  margin: 0;
-  font-size: 17px;
-  color: #e1e6ff;
-}
-
-.section-title {
-  margin: 28px 0 10px;
-  font-size: 22px;
+  margin: 0 0 20px;
+  font-size: 16px;
+  color: #e0e7ff;
 }
 
 /* TABLA */
+.guia-container {
+  overflow-x: auto;
+}
+
 .guia-table {
   width: 100%;
   border-collapse: collapse;
-  background: rgba(0, 0, 0, 0.18);
-  border-radius: 14px;
-  overflow: hidden;
-  margin-bottom: 16px;
 }
 
 .guia-table thead {
-  background: rgba(5, 8, 20, 0.9);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
 }
 
 .guia-table th,
 .guia-table td {
-  padding: 10px 14px;
-  font-size: 15px;
+  padding: 10px 8px;
   text-align: left;
+  vertical-align: top;
+  font-size: 15px;
 }
 
 .guia-table th {
   font-weight: 600;
 }
 
-.guia-table tbody tr:nth-child(odd) {
-  background: rgba(8, 16, 60, 0.85);
+.hora {
+  width: 150px;
+  font-weight: 600;
+  color: #e3ecff;
 }
 
-.guia-table tbody tr:nth-child(even) {
-  background: rgba(6, 14, 50, 0.85);
+/* líneas suaves */
+.guia-table tbody tr:not(:last-child) td {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.14);
 }
 
-.guia-table tbody tr:hover {
-  background: rgba(15, 40, 110, 0.9);
+/* PROGRAMAS */
+.prog-btn {
+  display: inline;
+  border: none;
+  background: transparent;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 15px;
+  text-align: left;
+  padding: 0;
+  margin: 2px 0;
+  cursor: pointer;
 }
 
-.detalle {
+.prog-btn:hover {
+  text-decoration: underline;
+}
+
+.prog-multi .prog-btn {
   display: block;
-  margin-top: 4px;
-  font-size: 13px;
-  color: #d3ddff;
+}
+
+/* ORIGEN */
+.pill {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-left: 6px;
+  opacity: 0.9;
+}
+
+.pill-propia {
+  color: #8ef0b0;
+}
+
+.pill-adq {
+  color: #ffd199;
+}
+
+.pill-mixto {
+  color: #c4c8ff;
+}
+
+/* MODAL */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+}
+
+.modal {
+  position: relative;
+  background: #050814;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  padding: 20px 22px 22px;
+  max-width: 480px;
+  width: 90%;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.7);
+}
+
+.modal-title {
+  font-size: 20px;
+  margin: 0 0 6px;
+}
+
+.modal-origen {
+  font-size: 14px;
+  color: #c5cff5;
+  margin: 0 0 10px;
+}
+
+.modal-desc {
+  font-size: 15px;
+  margin: 0;
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  border: none;
+  background: transparent;
+  color: #ffffff;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* UTIL */
+.hidden {
+  display: none;
 }
 
 /* FOOTER */
 .footer {
   padding: 10px 24px 16px;
-  font-size: 14px;
-  color: #c3c9e5;
   display: flex;
   justify-content: space-between;
+  font-size: 14px;
+  color: #c3c9e5;
+}
+
+.footer-right {
+  text-align: right;
 }
 
 /* RESPONSIVE */
@@ -185,13 +275,17 @@ button:focus {
     padding: 20px 16px 28px;
   }
 
+  .guia-title {
+    font-size: 24px;
+  }
+
   .guia-table th,
   .guia-table td {
     font-size: 14px;
-    padding: 8px 10px;
+    padding: 8px 6px;
   }
 
-  .guia-title {
-    font-size: 26px;
+  .hora {
+    width: 120px;
   }
 }
