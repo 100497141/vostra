@@ -2,14 +2,12 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <title>VOSTRA – Guía TV Semanal</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <!-- Montserrat -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guía TV Semanal – VOSTRA</title>
   <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
 <div class="app">
 
@@ -17,19 +15,24 @@
   <header class="topbar">
     <div class="topbar-left">
       <div class="logo">
-        <img src="logosvostra.jpeg" alt="Logo VOSTRA" class="logo-img" />
+        <img src="logosvostra.jpeg" class="logo-img" alt="VOSTRA">
         <span class="logo-text">VOSTRA</span>
       </div>
-
-      <nav class="nav" aria-label="Navegación principal">
-        <span class="nav-link nav-link--active">Guía TV</span>
+      <nav class="nav">
+        <a href="index.html" class="nav-link">Inicio</a>
+        <a href="directo.html" class="nav-link">En directo</a>
+        <a href="series.html" class="nav-link">Series</a>
+        <a href="peliculas.html" class="nav-link">Películas</a>
+        <a href="magazine.html" class="nav-link">Magazine</a>
+        <a href="fonoteca.html" class="nav-link">Fonoteca</a>
+        <a class="nav-link nav-link--active" href="#">Guía TV</a>
       </nav>
     </div>
 
     <div class="topbar-right">
-      <button class="icon-btn" aria-label="Buscar">🔍</button>
-      <button class="icon-btn" aria-label="Perfil">👤</button>
-      <button class="icon-btn" aria-label="Ajustes">⚙️</button>
+      <button class="icon-btn">🔍</button>
+      <button class="icon-btn">⚙️</button>
+      <button class="icon-btn">👤</button>
     </div>
   </header>
 
@@ -38,9 +41,11 @@
 
     <h1 class="guia-title">Guía TV Semanal</h1>
     <p class="guia-subtitle">
-      Vista rápida de toda la programación de VOSTRA. Haz clic en cualquier bloque para ver la ficha del programa.
+      Vista rápida de toda la programación de VOSTRA.  
+      Haz clic en cualquier bloque para ver su ficha completa.
     </p>
 
+    <!-- TABLA -->
     <div class="guia-container">
       <table class="guia-table">
         <thead>
@@ -51,366 +56,369 @@
             <th>Domingo</th>
           </tr>
         </thead>
+
         <tbody>
 
-          <!-- 06:00–09:00 -->
+          <!-- FILA 1 -->
           <tr>
             <td class="hora">06:00 – 09:00</td>
             <td>
-              <button class="prog-card"
-                      data-titulo="Despertador VOSTRA"
-                      data-origen="Producción propia"
-                      data-hora="06:00 – 09:00"
-                      data-desc="Bloque matinal calmado con música ligera, titulares horarios y contenidos de despertar en clave senior.">
-                <span class="card-line">Despertador VOSTRA</span>
-                <span class="pill pill-propia">Propia</span>
+              <button class="prog-btn"
+                data-titulo="Despertador VOSTRA"
+                data-origen="Propia"
+                data-hora="06:00 – 09:00"
+                data-desc="Bloque matinal calmado con música ligera y contenido amable.">
+                Despertador VOSTRA <span class="pill pill-propia">PROPIA</span>
               </button>
             </td>
+
             <td>
-              <button class="prog-card"
-                      data-titulo="VOSTRA Despierta – Fines de Semana"
-                      data-origen="Producción propia"
-                      data-hora="06:00 – 10:00"
-                      data-desc="Bloque musical matinal y actualidad muy ligera para empezar el fin de semana con calma.">
-                <span class="card-line">VOSTRA Despierta – Fines de Semana</span>
-                <span class="pill pill-propia">Propia</span>
+              <button class="prog-btn"
+                data-titulo="VOSTRA Despierta – Fines de Semana"
+                data-origen="Propia"
+                data-hora="06:00 – 09:00"
+                data-desc="Despertador en fin de semana con tono cercano y calmado.">
+                VOSTRA Despierta – Fines de Semana <span class="pill pill-propia">PROPIA</span>
               </button>
             </td>
+
             <td>
-              <button class="prog-card"
-                      data-titulo="Clásicos Musicales VOSTRA"
-                      data-origen="Adquisiciones"
-                      data-hora="06:00 – 09:00"
-                      data-desc="Música clásica, zarzuela, copla y archivo musical restaurado, seleccionados para el público senior.">
-                <span class="card-line">Clásicos Musicales VOSTRA</span>
-                <span class="pill pill-adq">Adq.</span>
+              <button class="prog-btn"
+                data-titulo="Clásicos Musicales VOSTRA"
+                data-origin="Adquisiciones"
+                data-hora="06:00 – 09:00"
+                data-desc="Archivo musical histórico de los años 50–80.">
+                Clásicos Musicales VOSTRA <span class="pill pill-adq">ADQ.</span>
               </button>
             </td>
           </tr>
 
-          <!-- 09:00–12:00 -->
+          <!-- FILA 2 -->
           <tr>
             <td class="hora">09:00 – 12:00</td>
             <td>
-              <button class="prog-card"
-                      data-titulo="Buenos Días, VOSTRA"
-                      data-origen="Producción propia"
-                      data-hora="09:00 – 12:00"
-                      data-desc="Magazine diario en directo con salud activa, consultorio, cocina y crónica social pensada para mayores.">
-                <span class="card-line">Buenos Días, VOSTRA</span>
-                <span class="pill pill-propia">Propia</span>
+              <button class="prog-btn"
+                data-titulo="Buenos Días, VOSTRA"
+                data-origen="Propia"
+                data-hora="09:00 – 12:00"
+                data-desc="Magazine amable con entrevistas humanas y temas sociales.">
+                Buenos Días, VOSTRA <span class="pill pill-propia">PROPIA</span>
               </button>
             </td>
+
             <td>
-              <button class="prog-card"
-                      data-titulo="Buenos Días, VOSTRA – Fines de Semana"
-                      data-origen="Producción propia"
-                      data-hora="10:00 – 12:00"
-                      data-desc="Versión de fin de semana con bienestar, jardinería, cocina y propuestas de vida activa.">
-                <span class="card-line">Buenos Días, VOSTRA – Fines de Semana</span>
-                <span class="pill pill-propia">Propia</span>
+              <button class="prog-btn"
+                data-titulo="Buenos Días, VOSTRA – Fin de Semana"
+                data-origen="Propia"
+                data-hora="09:00 – 12:00"
+                data-desc="Versión de fin de semana del magazine matinal.">
+                Buenos Días, VOSTRA – Fines de Semana <span class="pill pill-propia">PROPIA</span>
               </button>
             </td>
+
             <td>
-              <button class="prog-card"
-                      data-titulo="Domingo en Conexión"
-                      data-origen="Producción propia"
-                      data-hora="09:00 – 11:00"
-                      data-desc="Magazine suave con actualidad positiva, bienestar, lectura, espiritualidad y vida familiar.">
-                <span class="card-line">Domingo en Conexión</span>
-                <span class="pill pill-propia">Propia</span>
+              <button class="prog-btn"
+                data-titulo="Domingo en Conexión"
+                data-origen="Propia"
+                data-hora="09:00 – 12:00"
+                data-desc="Programa de convivencia y actualidad social.">
+                Domingo en Conexión <span class="pill pill-propia">PROPIA</span>
               </button>
             </td>
           </tr>
 
-          <!-- 12:00–14:30 -->
+          <!-- FILA 3 -->
           <tr>
             <td class="hora">12:00 – 14:30</td>
             <td>
-              <button class="prog-card"
-                      data-titulo="Conectados"
-                      data-origen="Producción propia"
-                      data-hora="12:00 – 12:15"
-                      data-desc="Microprograma de alfabetización digital para aprender a usar el móvil, WhatsApp, la cita médica y gestiones básicas.">
-                <span class="card-line">12:00–12:15 · Conectados</span>
-                <span class="pill pill-propia">Propia</span>
+
+              <button class="prog-btn"
+                data-titulo="Conectados"
+                data-origen="Propia"
+                data-hora="12:00 – 12:15"
+                data-desc="Microespacio de competencias digitales para mayores.">
+                12:00–12:15 · Conectados <span class="pill pill-propia">PROPIA</span>
+              </button><br>
+
+              <button class="prog-btn"
+                data-titulo="Grandes Series de Nuestra Vida"
+                data-origen="Adquisiciones"
+                data-hora="12:15 – 14:30"
+                data-desc="Series históricas europeas restauradas.">
+                12:15–14:30 · Grandes Series de Nuestra Vida <span class="pill pill-adq">ADQ.</span>
               </button>
 
-              <button class="prog-card"
-                      data-titulo="Grandes Series de Nuestra Vida"
-                      data-origen="Adquisiciones"
-                      data-hora="12:15 – 14:30"
-                      data-desc="Selección de series históricas europeas y españolas con ritmo pausado y gran valor cultural.">
-                <span class="card-line">12:15–14:30 · Grandes Series de Nuestra Vida</span>
-                <span class="pill pill-adq">Adq.</span>
+            </td>
+
+            <td>
+              <button class="prog-btn"
+                data-titulo="Cine Familiar de Sábado"
+                data-origen="Adquisiciones"
+                data-hora="12:00 – 14:30"
+                data-desc="Cine clásico y familiar recuperado para todos los públicos.">
+                Cine Familiar de Sábado <span class="pill pill-adq">ADQ.</span>
               </button>
             </td>
+
             <td>
-              <button class="prog-card"
-                      data-titulo="Cine Familiar de Sábado"
-                      data-origen="Adquisiciones"
-                      data-hora="12:00 – 14:30"
-                      data-desc="Clásicos familiares, comedias suaves y cine accesible apto para todas las edades.">
-                <span class="card-line">Cine Familiar de Sábado</span>
-                <span class="pill pill-adq">Adq.</span>
-              </button>
-            </td>
-            <td>
-              <button class="prog-card"
-                      data-titulo="Maratón de Series Históricas"
-                      data-origen="Adquisiciones"
-                      data-hora="11:00 – 14:30"
-                      data-desc="Tres capítulos de series históricas clásicas para un consumo relajado y nostálgico.">
-                <span class="card-line">Maratón de Series Históricas</span>
-                <span class="pill pill-adq">Adq.</span>
+              <button class="prog-btn"
+                data-titulo="Maratón de Series Históricas"
+                data-origen="Adquisiciones"
+                data-hora="12:00 – 14:30"
+                data-desc="Sesión de varias series históricas seguidas.">
+                Maratón de Series Históricas <span class="pill pill-adq">ADQ.</span>
               </button>
             </td>
           </tr>
 
-          <!-- 14:30–15:00 -->
+          <!-- FILA 4 -->
           <tr>
             <td class="hora">14:30 – 15:00</td>
+
             <td>
-              <button class="prog-card"
-                      data-titulo="El Noticiario de VOSTRA – Mediodía"
-                      data-origen="Producción propia"
-                      data-hora="14:30 – 15:00"
-                      data-desc="Informativo breve, claro y sereno con las claves del día.">
-                <span class="card-line">Noticiario VOSTRA – Mediodía</span>
-                <span class="pill pill-propia">Propia</span>
+              <button class="prog-btn"
+                data-titulo="Noticiario VOSTRA – Mediodía"
+                data-origen="Propia"
+                data-hora="14:30 – 15:00"
+                data-desc="Actualidad nacional con tono humano y directo.">
+                Noticiario VOSTRA – Mediodía <span class="pill pill-propia">PROPIA</span>
               </button>
             </td>
+
             <td>
-              <button class="prog-card"
-                      data-titulo="El Noticiario de VOSTRA – Sábado"
-                      data-origen="Producción propia"
-                      data-hora="14:30 – 15:00"
-                      data-desc="Resumen informativo de la jornada del sábado.">
-                <span class="card-line">Noticiario VOSTRA – Sábado</span>
-                <span class="pill pill-propia">Propia</span>
+              <button class="prog-btn"
+                data-titulo="Noticiario VOSTRA – Sábado"
+                data-origen="Propia"
+                data-hora="14:30 – 15:00"
+                data-desc="Edición sabatina del informativo diario.">
+                Noticiario VOSTRA – Sábado <span class="pill pill-propia">PROPIA</span>
               </button>
             </td>
+
             <td>
-              <button class="prog-card"
-                      data-titulo="El Noticiario de VOSTRA – Domingo"
-                      data-origen="Producción propia"
-                      data-hora="14:30 – 15:00"
-                      data-desc="Informativo de cierre de semana con las noticias más relevantes.">
-                <span class="card-line">Noticiario VOSTRA – Domingo</span>
-                <span class="pill pill-propia">Propia</span>
+              <button class="prog-btn"
+                data-titulo="Noticiario VOSTRA – Domingo"
+                data-origen="Propia"
+                data-hora="14:30 – 15:00"
+                data-desc="Edición dominical del informativo VOSTRA.">
+                Noticiario VOSTRA – Domingo <span class="pill pill-propia">PROPIA</span>
               </button>
             </td>
+
           </tr>
 
-          <!-- 15:00–17:30 -->
+          <!-- FILA 5 -->
           <tr>
             <td class="hora">15:00 – 17:30</td>
-            <td>
-              <button class="prog-card"
-                      data-titulo="Ficción de Sobremesa"
-                      data-origen="Mixto"
-                      data-hora="15:00 – 15:45"
-                      data-desc="De lunes a jueves, bloque de ficción clásica 'Historias del Ayer'; los viernes, estreno semanal de la serie propia 'La Residencia'.">
-                <span class="card-line">15:00–15:45 · Ficción de Sobremesa</span>
-                <span class="pill pill-mixto">Mixto</span>
-              </button>
 
-              <button class="prog-card"
-                      data-titulo="Cine del Recuerdo"
-                      data-origen="Adquisiciones"
-                      data-hora="15:45 – 17:30"
-                      data-desc="Películas españolas y europeas de los 50–70, western clásico y grandes comedias.">
-                <span class="card-line">15:45–17:30 · Cine del Recuerdo</span>
-                <span class="pill pill-adq">Adq.</span>
+            <td>
+              <button class="prog-btn"
+                data-titulo="Ficción de Sobremesa"
+                data-origen="Mixto"
+                data-hora="15:00 – 15:45"
+                data-desc="Dramas ligeros y adaptaciones de archivo.">
+                15:00–15:45 · Ficción de Sobremesa <span class="pill pill-mixto">MIXTO</span>
+              </button><br>
+
+              <button class="prog-btn"
+                data-titulo="Cine del Recuerdo"
+                data-origen="Adquisiciones"
+                data-hora="15:45 – 17:30"
+                data-desc="Películas clásicas restauradas.">
+                15:45–17:30 · Cine del Recuerdo <span class="pill pill-adq">ADQ.</span>
               </button>
             </td>
-            <td>
-              <button class="prog-card"
-                      data-titulo="Sábado de Western"
-                      data-origen="Adquisiciones"
-                      data-hora="15:00 – 16:30"
-                      data-desc="Un western clásico semanal, muy valorado por el público senior.">
-                <span class="card-line">15:00–16:30 · Sábado de Western</span>
-                <span class="pill pill-adq">Adq.</span>
-              </button>
 
-              <button class="prog-card"
-                      data-titulo="España Paso a Paso"
-                      data-origen="Producción propia"
-                      data-hora="16:30 – 18:00"
-                      data-desc="Documental de territorio sobre rutas tranquilas, patrimonio, zonas rurales y paisajes accesibles.">
-                <span class="card-line">16:30–18:00 · España Paso a Paso</span>
-                <span class="pill pill-propia">Propia</span>
+            <td>
+              <button class="prog-btn"
+                data-titulo="Sábado de Western"
+                data-origen="Adquisiciones"
+                data-hora="15:00 – 16:30"
+                data-desc="Clásicos del western norteamericano.">
+                15:00–16:30 · Sábado de Western <span class="pill pill-adq">ADQ.</span>
+              </button><br>
+
+              <button class="prog-btn"
+                data-titulo="España Paso a Paso"
+                data-origen="Propia"
+                data-hora="16:30 – 18:00"
+                data-desc="Historia cultural de España contada con calma.">
+                16:30–18:00 · España Paso a Paso <span class="pill pill-propia">PROPIA</span>
               </button>
             </td>
-            <td>
-              <button class="prog-card"
-                      data-titulo="Cine Nostalgia: Décadas que Nos Marcaron"
-                      data-origen="Adquisiciones"
-                      data-hora="15:00 – 17:00"
-                      data-desc="Películas por décadas (50, 60, 70) que activan la memoria emocional.">
-                <span class="card-line">15:00–17:00 · Cine Nostalgia</span>
-                <span class="pill pill-adq">Adq.</span>
-              </button>
 
-              <button class="prog-card"
-                      data-titulo="Grandes Personajes de España"
-                      data-origen="Mixto"
-                      data-hora="17:00 – 19:00"
-                      data-desc="Biográficos accesibles de figuras culturales, sociales o históricas relevantes.">
-                <span class="card-line">17:00–19:00 · Grandes Personajes de España</span>
-                <span class="pill pill-mixto">Mixto</span>
+            <td>
+              <button class="prog-btn"
+                data-titulo="Cine Nostalgia"
+                data-origen="Adquisiciones"
+                data-hora="15:00 – 17:00"
+                data-desc="El gran cine nostálgico de décadas que nos marcaron.">
+                15:00–17:00 · Cine Nostalgia <span class="pill pill-adq">ADQ.</span>
+              </button><br>
+
+              <button class="prog-btn"
+                data-titulo="Grandes Personajes de España"
+                data-origen="Mixto"
+                data-hora="17:00 – 19:00"
+                data-desc="Revisitación histórica de grandes figuras españolas.">
+                17:00–19:00 · Grandes Personajes de España <span class="pill pill-mixto">MIXTO</span>
               </button>
             </td>
+
           </tr>
 
-          <!-- 19:00–20:00 -->
+          <!-- FILA 6 -->
           <tr>
             <td class="hora">19:00 – 20:00</td>
+
             <td>
-              <button class="prog-card"
-                      data-titulo="VOSTRA en Comunidad"
-                      data-origen="Producción propia"
-                      data-hora="19:00 – 20:00"
-                      data-desc="Reportajes sobre asociaciones, iniciativas intergeneracionales y vida de barrio.">
-                <span class="card-line">VOSTRA en Comunidad</span>
-                <span class="pill pill-propia">Propia</span>
+              <button class="prog-btn"
+                data-titulo="VOSTRA en Comunidad"
+                data-origen="Propia"
+                data-hora="19:00 – 20:00"
+                data-desc="Historias comunitarias y proyectos vecinales.">
+                VOSTRA en Comunidad <span class="pill pill-propia">PROPIA</span>
               </button>
             </td>
+
             <td>
-              <button class="prog-card"
-                      data-titulo="Vuestra Historia"
-                      data-origen="Producción propia"
-                      data-hora="18:00 – 20:00"
-                      data-desc="Historias reales, memoria oral y testimonios íntimos de personas mayores.">
-                <span class="card-line">Vuestra Historia</span>
-                <span class="pill pill-propia">Propia</span>
+              <button class="prog-btn"
+                data-titulo="Vuestra Historia"
+                data-origen="Propia"
+                data-hora="19:00 – 20:00"
+                data-desc="Historias humanas contadas por sus protagonistas.">
+                Vuestra Historia <span class="pill pill-propia">PROPIA</span>
               </button>
             </td>
+
             <td>
-              <button class="prog-card"
-                      data-titulo="Especial Comunidad"
-                      data-origen="Producción propia"
-                      data-hora="19:00 – 20:00"
-                      data-desc="Reportajes sobre convivencia, redes de barrio, solidaridad y proyectos de mayores.">
-                <span class="card-line">Especial Comunidad</span>
-                <span class="pill pill-propia">Propia</span>
+              <button class="prog-btn"
+                data-titulo="Especial Comunidad"
+                data-origen="Propia"
+                data-hora="19:00 – 20:00"
+                data-desc="Convivencia, inclusión y cultura participativa.">
+                Especial Comunidad <span class="pill pill-propia">PROPIA</span>
               </button>
             </td>
+
           </tr>
 
-          <!-- 20:00–21:00 -->
+          <!-- FILA 7 -->
           <tr>
             <td class="hora">20:00 – 21:00</td>
+
             <td>
-              <button class="prog-card"
-                      data-titulo="La Hora VOSTRA"
-                      data-origen="Producción propia"
-                      data-hora="20:00 – 21:00"
-                      data-desc="Bloque de acceso calmado con resúmenes del día y avances del prime time.">
-                <span class="card-line">La Hora VOSTRA</span>
-                <span class="pill pill-propia">Propia</span>
+              <button class="prog-btn"
+                data-titulo="La Hora VOSTRA"
+                data-origen="Propia"
+                data-hora="20:00 – 21:00"
+                data-desc="Gran magazine de tarde con actualidad calmada.">
+                La Hora VOSTRA <span class="pill pill-propia">PROPIA</span>
               </button>
             </td>
+
             <td>
-              <button class="prog-card"
-                      data-titulo="La Hora VOSTRA – Fin de Semana"
-                      data-origen="Producción propia"
-                      data-hora="20:00 – 21:00"
-                      data-desc="Selección de reportajes ligeros y actualidad amable antes de la película estelar del sábado.">
-                <span class="card-line">La Hora VOSTRA – Fin de Semana</span>
-                <span class="pill pill-propia">Propia</span>
+              <button class="prog-btn"
+                data-titulo="La Hora VOSTRA – Fin de Semana"
+                data-origen="Propia"
+                data-hora="20:00 – 21:00"
+                data-desc="Edición tranquila orientada al entretenimiento.">
+                La Hora VOSTRA – Fin de Semana <span class="pill pill-propia">PROPIA</span>
               </button>
             </td>
+
             <td>
-              <button class="prog-card"
-                      data-titulo="La Hora VOSTRA – Domingo"
-                      data-origen="Producción propia"
-                      data-hora="20:00 – 21:00"
-                      data-desc="Contenidos amables y culturales antes del Especial Premium Domingo.">
-                <span class="card-line">La Hora VOSTRA – Domingo</span>
-                <span class="pill pill-propia">Propia</span>
+              <button class="prog-btn"
+                data-titulo="La Hora VOSTRA – Domingo"
+                data-origen="Propia"
+                data-hora="20:00 – 21:00"
+                data-desc="Versión dominical con entrevistas y reflexión.">
+                La Hora VOSTRA – Domingo <span class="pill pill-propia">PROPIA</span>
               </button>
             </td>
+
           </tr>
 
-          <!-- 21:00–23:30 -->
+          <!-- FILA 8 -->
           <tr>
             <td class="hora">21:00 – 23:30</td>
+
             <td>
-              <button class="prog-card"
-                      data-titulo="El Noticiario de VOSTRA – Noche"
-                      data-origen="Producción propia"
-                      data-hora="21:00 – 21:30"
-                      data-desc="Informativo principal de la cadena, con tono claro, pausado y contextualizado.">
-                <span class="card-line">21:00–21:30 · Noticiario Noche</span>
-                <span class="pill pill-propia">Propia</span>
+
+              <button class="prog-btn"
+                data-titulo="Noticiario Noche"
+                data-origen="Propia"
+                data-hora="21:00 – 21:30"
+                data-desc="Edición nocturna del informativo VOSTRA.">
+                21:00–21:30 · Noticiario Noche <span class="pill pill-propia">PROPIA</span>
+              </button><br>
+
+              <button class="prog-btn"
+                data-titulo="Prime Time Adelantado"
+                data-origen="Mixto"
+                data-hora="21:30 – 23:30"
+                data-desc="Películas o especiales en acceso al prime time.">
+                21:30–23:30 · Prime Time Adelantado <span class="pill pill-mixto">MIXTO</span>
               </button>
 
-              <button class="prog-card"
-                      data-titulo="Prime Time Adelantado"
-                      data-origen="Mixto"
-                      data-hora="21:30 – 23:30"
-                      data-desc="Bloque de prime time adelantado con: lunes 'El Talento Nunca Duerme', martes 'Cine Premium VOSTRA', miércoles 'Clásicos de la Ficción Histórica', jueves 'Grandes Documentales del Mundo' y viernes 'Gala Nostalgia'.">
-                <span class="card-line">21:30–23:30 · Prime Time Adelantado</span>
-                <span class="pill pill-mixto">Mixto</span>
-              </button>
             </td>
+
             <td>
-              <button class="prog-card"
-                      data-titulo="Cine Estelar de Sábado"
-                      data-origen="Adquisiciones"
-                      data-hora="21:00 – 23:30"
-                      data-desc="La gran película de la semana: cine clásico de prestigio o restauraciones emblemáticas.">
-                <span class="card-line">Cine Estelar de Sábado</span>
-                <span class="pill pill-adq">Adq.</span>
+              <button class="prog-btn"
+                data-titulo="Cine Estelar de Sábado"
+                data-origen="Adquisiciones"
+                data-hora="21:00 – 23:30"
+                data-desc="Película principal de la noche en VOSTRA.">
+                Cine Estelar de Sábado <span class="pill pill-adq">ADQ.</span>
               </button>
             </td>
+
             <td>
-              <button class="prog-card"
-                      data-titulo="Especial Premium Domingo"
-                      data-origen="Mixto"
-                      data-hora="21:00 – 23:00"
-                      data-desc="Documentales de prestigio, teatro grabado, conciertos especiales o eventos culturales relevantes.">
-                <span class="card-line">Especial Premium Domingo</span>
-                <span class="pill pill-mixto">Mixto</span>
+              <button class="prog-btn"
+                data-titulo="Especial Premium Domingo"
+                data-origen="Mixto"
+                data-hora="21:00 – 23:30"
+                data-desc="Evento televisivo premium para cerrar la semana.">
+                Especial Premium Domingo <span class="pill pill-mixto">MIXTO</span>
               </button>
             </td>
+
           </tr>
 
-          <!-- 23:30–00:30 -->
+          <!-- FILA 9 -->
           <tr>
             <td class="hora">23:30 – 00:30</td>
+
             <td>
-              <button class="prog-card"
-                      data-titulo="Fonoteca VOSTRA"
-                      data-origen="Adquisiciones"
-                      data-hora="23:30 – 00:30"
-                      data-desc="Conciertos emblemáticos, archivo sonoro, recitales de ópera y música tradicional.">
-                <span class="card-line">Fonoteca VOSTRA</span>
-                <span class="pill pill-adq">Adq.</span>
+              <button class="prog-btn"
+                data-titulo="Fonoteca VOSTRA"
+                data-origen="Adquisiciones"
+                data-hora="23:30 – 00:30"
+                data-desc="Selección musical tranquila y de archivo.">
+                Fonoteca VOSTRA <span class="pill pill-adq">ADQ.</span>
               </button>
             </td>
+
             <td>
-              <button class="prog-card"
-                      data-titulo="Concierto Íntimo"
-                      data-origen="Adquisiciones"
-                      data-hora="23:30 – 00:30"
-                      data-desc="Recitales acústicos, conciertos pequeños y actuaciones musicales de archivo.">
-                <span class="card-line">Concierto Íntimo</span>
-                <span class="pill pill-adq">Adq.</span>
+              <button class="prog-btn"
+                data-titulo="Concierto Íntimo"
+                data-origen="Adquisiciones"
+                data-hora="23:30 – 00:30"
+                data-desc="Conciertos históricos remasterizados.">
+                Concierto Íntimo <span class="pill pill-adq">ADQ.</span>
               </button>
             </td>
+
             <td>
-              <button class="prog-card"
-                      data-titulo="Fonoteca Nocturna"
-                      data-origen="Adquisiciones"
-                      data-hora="23:00 – 00:30"
-                      data-desc="Selección musical calmada para cerrar la semana.">
-                <span class="card-line">Fonoteca Nocturna</span>
-                <span class="pill pill-adq">Adq.</span>
+              <button class="prog-btn"
+                data-titulo="Fonoteca Nocturna"
+                data-origen="Adquisiciones"
+                data-hora="23:30 – 00:30"
+                data-desc="Selección musical calmada para cerrar la semana.">
+                Fonoteca Nocturna <span class="pill pill-adq">ADQ.</span>
               </button>
             </td>
+
           </tr>
 
         </tbody>
@@ -421,7 +429,7 @@
 
   <!-- FOOTER -->
   <footer class="footer">
-    <div class="footer-left">Fonoteca · VOSTRA</div>
+    <span>Fonoteca · VOSTRA</span>
     <div class="footer-right">
       <a href="#">Accesibilidad</a>
       <a href="#">Sobre VOSTRA</a>
@@ -431,20 +439,21 @@
     </div>
   </footer>
 
-  <!-- MODAL DETALLE -->
-  <div class="modal-backdrop hidden" id="modal">
-    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-      <button class="modal-close" aria-label="Cerrar ficha">✕</button>
-      <h2 class="modal-title" id="modal-title"></h2>
-      <p class="modal-meta"></p>
-      <p class="modal-desc"></p>
-    </div>
-  </div>
-
 </div>
 
+<!-- MODAL -->
+<div class="modal-backdrop hidden" id="modal">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <button class="modal-close" aria-label="Cerrar ficha">✕</button>
+    <h2 class="modal-title" id="modal-title"></h2>
+    <p class="modal-meta"></p>
+    <p class="modal-desc"></p>
+  </div>
+</div>
+
+<!-- JS -->
 <script>
-  const cards = document.querySelectorAll('.prog-card');
+  const progButtons = document.querySelectorAll('.prog-btn');
   const modalBackdrop = document.getElementById('modal');
   const modalTitle = document.querySelector('.modal-title');
   const modalMeta = document.querySelector('.modal-meta');
@@ -462,13 +471,14 @@
     modalBackdrop.classList.add('hidden');
   }
 
-  cards.forEach(card => {
-    card.addEventListener('click', () => {
-      const titulo = card.dataset.titulo;
-      const origen = card.dataset.origen;
-      const hora = card.dataset.hora;
-      const desc = card.dataset.desc;
-      openModal(titulo, origen, hora, desc);
+  progButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      openModal(
+        btn.dataset.titulo,
+        btn.dataset.origen,
+        btn.dataset.hora || "",
+        btn.dataset.desc || ""
+      );
     });
   });
 
