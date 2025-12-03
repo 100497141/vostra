@@ -5,7 +5,7 @@
   --font-main: "Montserrat", system-ui, sans-serif;
 }
 
-/* RESET */
+/* RESET BÁSICO */
 *,
 *::before,
 *::after {
@@ -17,19 +17,16 @@ body {
   margin: 0;
   padding: 0;
   height: 100%;
+  font-family: var(--font-main);
   background: #000;
   color: #fff;
-  font-family: var(--font-main);
-  font-size: 18px;
-  line-height: 1.5;
 }
 
-/* CONTENEDOR PRINCIPAL */
+/* CONTENEDOR GENERAL */
 .app {
-  width: 100%;
+  min-height: 100vh;
   max-width: 1200px;
   margin: 0 auto;
-  min-height: 100vh;
   background: radial-gradient(circle at top left, #2e5fae 0%, #0a43d8 40%, #050814 100%);
   display: flex;
   flex-direction: column;
@@ -40,66 +37,51 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 14px 28px;
-  background: rgba(0, 0, 0, 0.45);
+  padding: 12px 24px;
+  background: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(14px);
 }
 
 .topbar-left {
   display: flex;
   align-items: center;
-  gap: 28px;
+  gap: 24px;
 }
 
 .logo {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
+  text-decoration: none;
+  color: #ffffff;
 }
 
 .logo-img {
-  height: 34px;
+  height: 32px;
 }
 
 .logo-text {
-  font-size: 20px;
   font-weight: 700;
   letter-spacing: 0.12em;
+  font-size: 18px;
 }
 
 .nav {
   display: flex;
-  gap: 18px;
+  gap: 16px;
 }
 
 .nav-link {
+  font-size: 15px;
   color: #d4e0ff;
-  font-size: 17px;
-  font-weight: 500;
   text-decoration: none;
+  padding-bottom: 2px;
   border-bottom: 2px solid transparent;
-  padding-bottom: 3px;
 }
 
 .nav-link--active {
   color: #ffffff;
   border-bottom-color: #ffffff;
-}
-
-.topbar-right {
-  display: flex;
-  gap: 8px;
-}
-
-.icon-btn {
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  border: none;
-  background: rgba(255, 255, 255, 0.16);
-  color: #ffffff;
-  font-size: 18px;
-  cursor: pointer;
 }
 
 /* FOCUS ACCESIBLE */
@@ -111,188 +93,86 @@ button:focus {
 
 /* MAIN */
 .main {
-  padding: 28px 28px 40px;
+  padding: 24px 24px 32px;
   flex: 1;
 }
 
 .guia-main {
-  max-width: 1100px;
+  max-width: 1120px;
   margin: 0 auto;
+}
+
+.guia-header {
+  margin-bottom: 24px;
 }
 
 .guia-title {
   font-size: 32px;
-  font-weight: 700;
-  margin-bottom: 6px;
+  margin: 0 0 6px;
 }
 
 .guia-subtitle {
-  font-size: 18px;
-  color: #e0e7ff;
-  margin-bottom: 12px;
+  margin: 0;
+  font-size: 17px;
+  color: #e1e6ff;
 }
 
-/* PANEL DE LA GUÍA (cambio gordo: tarjeta clara sobre azul) */
-.guia-container {
-  margin-top: 8px;
-  padding: 20px 24px 24px;
-  border-radius: 22px;
-  background: #050814;              /* bloque oscuro sólido */
-  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.85);
-  overflow-x: auto;
+.section-title {
+  margin: 28px 0 10px;
+  font-size: 22px;
 }
 
-/* TABLA SUPER SIMPLE */
+/* TABLA */
 .guia-table {
   width: 100%;
   border-collapse: collapse;
+  background: rgba(0, 0, 0, 0.18);
+  border-radius: 14px;
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+
+.guia-table thead {
+  background: rgba(5, 8, 20, 0.9);
 }
 
 .guia-table th,
 .guia-table td {
-  padding: 10px 10px;
+  padding: 10px 14px;
+  font-size: 15px;
   text-align: left;
-  font-size: 16px;
-  vertical-align: top;
 }
 
-/* cabecera con línea fuerte */
-.guia-table thead th {
+.guia-table th {
   font-weight: 600;
-  font-size: 17px;
-  color: #f4f6ff;
-  border-bottom: 2px solid rgba(255, 255, 255, 0.35);
 }
 
-/* filas alternas para que se vea CLARÍSIMO */
 .guia-table tbody tr:nth-child(odd) {
-  background: rgba(255, 255, 255, 0.03);
+  background: rgba(8, 16, 60, 0.85);
 }
 
 .guia-table tbody tr:nth-child(even) {
-  background: transparent;
+  background: rgba(6, 14, 50, 0.85);
 }
 
-.hora {
-  width: 140px;
-  font-weight: 600;
-  color: #f7f8ff;
-  white-space: nowrap;
+.guia-table tbody tr:hover {
+  background: rgba(15, 40, 110, 0.9);
 }
 
-/* PROGRAMAS – UNA LÍNEA CADA UNO */
-.prog-btn {
+.detalle {
   display: block;
-  border: none;
-  background: transparent;
-  color: #ffffff;
-  font-family: inherit;
-  font-size: 16px;
-  text-align: left;
-  padding: 0;
-  cursor: pointer;
-  margin: 0 0 4px;
-  line-height: 1.4;
-}
-
-.prog-btn:hover {
-  text-decoration: underline;
-}
-
-/* PILLS ORIGEN (claras pero simples) */
-.pill {
-  font-size: 12px;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  margin-left: 6px;
-  font-weight: 600;
-  opacity: 0.95;
-}
-
-.pill-propia {
-  color: #7ae8a2;
-}
-
-.pill-adq {
-  color: #ffd6a0;
-}
-
-.pill-mixto {
-  color: #c9ccff;
-}
-
-/* MODAL POP-UP */
-.modal-backdrop {
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.6);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 50;
-}
-
-.modal {
-  background: #050814;
-  border-radius: 18px;
-  border: 1px solid rgba(255, 255, 255, 0.35);
-  padding: 20px 24px 22px;
-  max-width: 480px;
-  width: 90%;
-  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.7);
-  position: relative;
-}
-
-.modal-title {
-  font-size: 22px;
-  margin: 0 0 6px;
-  font-weight: 600;
-}
-
-.modal-origen {
-  font-size: 15px;
-  color: #c5cff5;
-  margin: 0 0 10px;
-}
-
-.modal-desc {
-  font-size: 16px;
-  margin: 0;
-}
-
-.modal-close {
-  position: absolute;
-  top: 12px;
-  right: 14px;
-  border: none;
-  background: transparent;
-  color: #ffffff;
-  font-size: 20px;
-  cursor: pointer;
-}
-
-/* UTILIDADES */
-.hidden {
-  display: none;
+  margin-top: 4px;
+  font-size: 13px;
+  color: #d3ddff;
 }
 
 /* FOOTER */
 .footer {
-  padding: 14px 28px 20px;
+  padding: 10px 24px 16px;
+  font-size: 14px;
+  color: #c3c9e5;
   display: flex;
   justify-content: space-between;
-  font-size: 15px;
-  color: #c3c9e5;
-}
-
-.footer-right a {
-  color: #c3c9e5;
-  text-decoration: none;
-  margin-left: 12px;
-}
-
-.footer-right a:hover {
-  text-decoration: underline;
 }
 
 /* RESPONSIVE */
@@ -302,24 +182,16 @@ button:focus {
   }
 
   .main {
-    padding: 24px 16px 32px;
-  }
-
-  .guia-main {
-    padding-inline: 0;
-  }
-
-  .guia-container {
-    padding: 16px 14px 18px;
+    padding: 20px 16px 28px;
   }
 
   .guia-table th,
   .guia-table td {
     font-size: 14px;
-    padding: 8px 6px;
+    padding: 8px 10px;
   }
 
-  .hora {
-    width: 120px;
+  .guia-title {
+    font-size: 26px;
   }
 }
