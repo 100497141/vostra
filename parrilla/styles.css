@@ -129,60 +129,60 @@ button:focus {
 .guia-subtitle {
   font-size: 18px;
   color: #e0e7ff;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
 }
 
-/* PANEL DE LA TABLA (tarjeta grande, minimal) */
+/* PANEL DE LA GUÍA (cambio gordo: tarjeta clara sobre azul) */
 .guia-container {
   margin-top: 8px;
-  padding: 18px 22px 22px;
-  border-radius: 24px;
-  background: rgba(4, 9, 30, 0.92);
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.7);
+  padding: 20px 24px 24px;
+  border-radius: 22px;
+  background: #050814;              /* bloque oscuro sólido */
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.85);
   overflow-x: auto;
 }
 
-/* TABLA */
+/* TABLA SUPER SIMPLE */
 .guia-table {
   width: 100%;
-  border-collapse: separate;
-  border-spacing: 0 10px; /* espacio entre filas */
-}
-
-.guia-table thead tr th {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
-  padding-bottom: 10px;
+  border-collapse: collapse;
 }
 
 .guia-table th,
 .guia-table td {
-  padding: 4px 10px;
+  padding: 10px 10px;
   text-align: left;
   font-size: 16px;
   vertical-align: top;
 }
 
-.guia-table th {
+/* cabecera con línea fuerte */
+.guia-table thead th {
   font-weight: 600;
   font-size: 17px;
   color: #f4f6ff;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.35);
+}
+
+/* filas alternas para que se vea CLARÍSIMO */
+.guia-table tbody tr:nth-child(odd) {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.guia-table tbody tr:nth-child(even) {
+  background: transparent;
 }
 
 .hora {
-  width: 150px;
+  width: 140px;
   font-weight: 600;
   color: #f7f8ff;
   white-space: nowrap;
 }
 
-/* sin líneas extra en el cuerpo, solo el espacio vertical */
-.guia-table tbody tr td {
-  border: none;
-}
-
-/* PROGRAMAS – SUPER LEGIBLES */
+/* PROGRAMAS – UNA LÍNEA CADA UNO */
 .prog-btn {
-  display: block;              /* cada programa en su línea */
+  display: block;
   border: none;
   background: transparent;
   color: #ffffff;
@@ -191,15 +191,15 @@ button:focus {
   text-align: left;
   padding: 0;
   cursor: pointer;
-  margin: 0 0 3px;
-  line-height: 1.35;
+  margin: 0 0 4px;
+  line-height: 1.4;
 }
 
 .prog-btn:hover {
   text-decoration: underline;
 }
 
-/* ORIGEN (minimal pero muy visible) */
+/* PILLS ORIGEN (claras pero simples) */
 .pill {
   font-size: 12px;
   text-transform: uppercase;
@@ -310,13 +310,13 @@ button:focus {
   }
 
   .guia-container {
-    padding: 14px 14px 18px;
+    padding: 16px 14px 18px;
   }
 
   .guia-table th,
   .guia-table td {
     font-size: 14px;
-    padding: 3px 6px;
+    padding: 8px 6px;
   }
 
   .hora {
