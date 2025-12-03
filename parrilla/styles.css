@@ -286,3 +286,78 @@ button:focus {
     padding-inline: 4px;
   }
 }
+/* ===============================
+   GUÍA TV SEMANAL – ESTILO TABLA
+   =============================== */
+
+.guia-main {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.guia-title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.guia-subtitle {
+  font-size: 18px;
+  color: #e0e7ff;
+  margin-bottom: 20px;
+}
+
+.guia-container {
+  overflow-x: auto;
+  padding-bottom: 20px;
+}
+
+.guia-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: rgba(0, 0, 0, 0.45);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.guia-table thead {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.guia-table th,
+.guia-table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  text-align: left;
+  font-size: 16px;
+}
+
+.guia-table th {
+  font-weight: 600;
+  font-size: 17px;
+}
+
+.hora {
+  width: 170px;
+  font-weight: 600;
+  color: #dce5ff;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.guia-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* RESPONSIVE */
+@media (max-width: 700px) {
+  .hora {
+    width: 120px;
+    font-size: 14px;
+  }
+
+  .guia-table th,
+  .guia-table td {
+    font-size: 14px;
+    padding: 10px 12px;
+  }
+}
