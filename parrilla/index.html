@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <title>VOSTRA – Parrilla Completa</title>
+  <title>VOSTRA – Guía TV Semanal</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <!-- Montserrat -->
@@ -17,13 +17,14 @@
   <header class="topbar">
     <div class="topbar-left">
       <div class="logo">
-        <!-- Copia logosvostra.jpeg a esta carpeta para que se vea -->
         <img src="logosvostra.jpeg" alt="Logo VOSTRA" class="logo-img" />
         <span class="logo-text">VOSTRA</span>
       </div>
 
       <nav class="nav" aria-label="Navegación principal">
-        <span class="nav-link nav-link--active">Parrilla</span>
+        <a href="index.html" class="nav-link">Inicio</a>
+        <a href="parrilla.html" class="nav-link">Parrilla</a>
+        <span class="nav-link nav-link--active">Guía TV</span>
       </nav>
     </div>
 
@@ -35,510 +36,109 @@
   </header>
 
   <!-- MAIN -->
-  <main class="main parrilla-main" aria-label="Parrilla completa de VOSTRA">
+  <main class="main guia-main">
 
-    <h1 class="parrilla-title">Parrilla VOSTRA</h1>
-    <p class="parrilla-subtitle">
-      Programación completa, diseñada para ser clara, accesible y fácil de leer en pantalla.
-    </p>
+    <h1 class="guia-title">Guía TV Semanal</h1>
+    <p class="guia-subtitle">Consulta rápida de toda la programación de VOSTRA en formato tabla.</p>
 
-    <!-- PESTAÑAS DÍAS -->
-    <div class="day-tabs" role="tablist" aria-label="Días de la parrilla">
-      <button class="day-tab active" data-day="laborables" role="tab" aria-selected="true">
-        Lunes a Viernes
-      </button>
-      <button class="day-tab" data-day="sabado" role="tab" aria-selected="false">
-        Sábado
-      </button>
-      <button class="day-tab" data-day="domingo" role="tab" aria-selected="false">
-        Domingo
-      </button>
+    <div class="guia-container">
+      <table class="guia-table">
+        <thead>
+          <tr>
+            <th>Hora</th>
+            <th>L–V</th>
+            <th>Sábado</th>
+            <th>Domingo</th>
+          </tr>
+        </thead>
+
+        <tbody>
+
+          <!-- 06:00 -->
+          <tr>
+            <td class="hora">06:00 – 09:00</td>
+            <td>Despertador VOSTRA</td>
+            <td>VOSTRA Despierta – Fines de Semana</td>
+            <td>Clásicos Musicales VOSTRA</td>
+          </tr>
+
+          <!-- 09:00 -->
+          <tr>
+            <td class="hora">09:00 – 12:00</td>
+            <td>Buenos Días, VOSTRA</td>
+            <td>Buenos Días, VOSTRA – Fines de Semana</td>
+            <td>Domingo en Conexión</td>
+          </tr>
+
+          <!-- 12:00 -->
+          <tr>
+            <td class="hora">12:00 – 14:30</td>
+            <td>
+              12:00–12:15: Conectados<br>
+              12:15–14:30: Grandes Series de Nuestra Vida
+            </td>
+            <td>Cine Familiar de Sábado</td>
+            <td>Maratón de Series Históricas</td>
+          </tr>
+
+          <!-- 14:30 -->
+          <tr>
+            <td class="hora">14:30 – 15:00</td>
+            <td>El Noticiario de VOSTRA – Mediodía</td>
+            <td>El Noticiario de VOSTRA – Sábado</td>
+            <td>El Noticiario de VOSTRA – Domingo</td>
+          </tr>
+
+          <!-- 15:00 -->
+          <tr>
+            <td class="hora">15:00 – 17:30</td>
+            <td>
+              15:00–15:45: Ficción de Sobremesa<br>
+              15:45–17:30: Cine del Recuerdo
+            </td>
+            <td>15:00–16:30: Sábado de Western<br>16:30–18:00: España Paso a Paso</td>
+            <td>15:00–17:00: Cine Nostalgia<br>17:00–19:00: Grandes Personajes de España</td>
+          </tr>
+
+          <!-- 19:00 -->
+          <tr>
+            <td class="hora">19:00 – 20:00</td>
+            <td>VOSTRA en Comunidad</td>
+            <td>Vuestra Historia</td>
+            <td>Especial Comunidad</td>
+          </tr>
+
+          <!-- 20:00 -->
+          <tr>
+            <td class="hora">20:00 – 21:00</td>
+            <td>La Hora VOSTRA</td>
+            <td>La Hora VOSTRA – Fin de Semana</td>
+            <td>La Hora VOSTRA – Domingo</td>
+          </tr>
+
+          <!-- 21:00 -->
+          <tr>
+            <td class="hora">21:00 – 23:30</td>
+            <td>
+              21:00–21:30: Noticiario Noche<br>
+              21:30–23:30: Prime Time Adelantado
+            </td>
+            <td>Cine Estelar de Sábado</td>
+            <td>Especial Premium Domingo</td>
+          </tr>
+
+          <!-- 23:30 -->
+          <tr>
+            <td class="hora">23:30 – 00:30</td>
+            <td>Fonoteca VOSTRA</td>
+            <td>Concierto Íntimo</td>
+            <td>Fonoteca Nocturna</td>
+          </tr>
+        </tbody>
+
+      </table>
     </div>
 
-    <!-- CONTENEDOR PARRILLAS -->
-    <section class="parrilla-container">
-
-      <!-- LUNES A VIERNES -->
-      <div class="parrilla-dia active" id="parrilla-laborables" role="tabpanel">
-        <h2 class="parrilla-dia-title">Lunes a Viernes</h2>
-
-        <div class="slot">
-          <div class="slot-time">06:00 – 09:00</div>
-          <div class="slot-content">
-            <div class="slot-title">Despertador VOSTRA</div>
-            <div class="slot-desc">
-              Bloque matinal calmado con música ligera, titulares horarios y contenidos de despertar en clave senior.
-            </div>
-            <div class="slot-tags">
-              <span class="slot-tag slot-tag--propia">Producción propia</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="slot">
-          <div class="slot-time">09:00 – 12:00</div>
-          <div class="slot-content">
-            <div class="slot-title">Buenos Días, VOSTRA</div>
-            <div class="slot-desc">
-              Magazine diario en directo con salud, consultorio, cocina y crónica social.
-            </div>
-            <div class="slot-tags">
-              <span class="slot-tag slot-tag--propia">Producción propia</span>
-              <span class="slot-tag">Magazine</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="slot">
-          <div class="slot-time">12:00 – 12:15</div>
-          <div class="slot-content">
-            <div class="slot-title">Conectados</div>
-            <div class="slot-desc">
-              Microprograma de alfabetización digital: móvil, WhatsApp, cita médica y gestiones básicas.
-            </div>
-            <div class="slot-tags">
-              <span class="slot-tag slot-tag--propia">Producción propia</span>
-              <span class="slot-tag">Servicio</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="slot">
-          <div class="slot-time">12:15 – 14:30</div>
-          <div class="slot-content">
-            <div class="slot-title">Grandes Series de Nuestra Vida</div>
-            <div class="slot-desc">
-              Series históricas europeas y españolas con ritmo pausado (BBC, RAI, RTVE archivo).
-            </div>
-            <div class="slot-tags">
-              <span class="slot-tag slot-tag--adq">Adquisiciones</span>
-              <span class="slot-tag">Series históricas</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="slot">
-          <div class="slot-time">14:30 – 15:00</div>
-          <div class="slot-content">
-            <div class="slot-title">El Noticiario de VOSTRA – Mediodía</div>
-            <div class="slot-desc">
-              Informativo breve, claro y pausado.
-            </div>
-            <div class="slot-tags">
-              <span class="slot-tag slot-tag--propia">Producción propia</span>
-              <span class="slot-tag">Informativo</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="slot">
-          <div class="slot-time">15:00 – 15:45</div>
-          <div class="slot-content">
-            <div class="slot-title">Ficción de Sobremesa</div>
-            <div class="slot-desc">
-              L–J: bloque “Historias del Ayer” (ficción clásica).<br />
-              Viernes: estreno semanal de <strong>La Residencia</strong>.
-            </div>
-            <div class="slot-tags">
-              <span class="slot-tag slot-tag--mixto">Mixto</span>
-              <span class="slot-tag">Ficción</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="slot">
-          <div class="slot-time">15:45 – 17:30</div>
-          <div class="slot-content">
-            <div class="slot-title">Cine del Recuerdo</div>
-            <div class="slot-desc">
-              Películas españolas y europeas de los 50–70, western clásico y grandes comedias.
-            </div>
-            <div class="slot-tags">
-              <span class="slot-tag slot-tag--adq">Adquisiciones</span>
-              <span class="slot-tag">Cine clásico</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="slot">
-          <div class="slot-time">17:30 – 19:00</div>
-          <div class="slot-content">
-            <div class="slot-title">España Cercana</div>
-            <div class="slot-desc">
-              Documentales de servicio sobre territorio, historia local y rutas accesibles.
-            </div>
-            <div class="slot-tags">
-              <span class="slot-tag slot-tag--propia">Producción propia</span>
-              <span class="slot-tag">Documental</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="slot">
-          <div class="slot-time">19:00 – 20:00</div>
-          <div class="slot-content">
-            <div class="slot-title">VOSTRA en Comunidad</div>
-            <div class="slot-desc">
-              Reportajes sobre asociaciones, iniciativas intergeneracionales y vida de barrio.
-            </div>
-            <div class="slot-tags">
-              <span class="slot-tag slot-tag--propia">Producción propia</span>
-              <span class="slot-tag">Comunidad</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="slot">
-          <div class="slot-time">20:00 – 21:00</div>
-          <div class="slot-content">
-            <div class="slot-title">La Hora VOSTRA</div>
-            <div class="slot-desc">
-              Bloque de acceso calmado con resúmenes del día y contenidos previos al prime time.
-            </div>
-            <div class="slot-tags">
-              <span class="slot-tag slot-tag--propia">Producción propia</span>
-              <span class="slot-tag">Access / Continuidad</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="slot">
-          <div class="slot-time">21:00 – 21:30</div>
-          <div class="slot-content">
-            <div class="slot-title">El Noticiario de VOSTRA – Noche</div>
-            <div class="slot-desc">
-              Informativo principal de la cadena, con tono claro y sereno.
-            </div>
-            <div class="slot-tags">
-              <span class="slot-tag slot-tag--propia">Producción propia</span>
-              <span class="slot-tag">Informativo</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="slot">
-          <div class="slot-time">21:30 – 23:30</div>
-          <div class="slot-content">
-            <div class="slot-title">Prime Time Adelantado</div>
-            <div class="slot-desc">
-              Lunes: El Talento Nunca Duerme<br />
-              Martes: Cine Premium VOSTRA<br />
-              Miércoles: Clásicos de la Ficción Histórica<br />
-              Jueves: Grandes Documentales del Mundo<br />
-              Viernes: Gala Nostalgia
-            </div>
-            <div class="slot-tags">
-              <span class="slot-tag slot-tag--mixto">Mixto</span>
-              <span class="slot-tag">Prime time</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="slot">
-          <div class="slot-time">23:30 – 00:30</div>
-          <div class="slot-content">
-            <div class="slot-title">Fonoteca VOSTRA</div>
-            <div class="slot-desc">
-              Conciertos emblemáticos, archivo sonoro y música tradicional.
-            </div>
-            <div class="slot-tags">
-              <span class="slot-tag slot-tag--adq">Adquisiciones</span>
-              <span class="slot-tag">Música</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- SÁBADO -->
-      <div class="parrilla-dia" id="parrilla-sabado" role="tabpanel">
-        <h2 class="parrilla-dia-title">Sábado</h2>
-
-        <div class="slot">
-          <div class="slot-time">06:00 – 10:00</div>
-          <div class="slot-content">
-            <div class="slot-title">VOSTRA Despierta – Fines de Semana</div>
-            <div class="slot-desc">
-              Bloque musical matinal y actualidad muy ligera.
-            </div>
-            <div class="slot-tags">
-              <span class="slot-tag slot-tag--propia">Producción propia</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="slot">
-          <div class="slot-time">10:00 – 12:00</div>
-          <div class="slot-content">
-            <div class="slot-title">Buenos Días, VOSTRA – Edición Fines de Semana</div>
-            <div class="slot-desc">
-              Versión reducida del magazine con bienestar, jardinería, cocina y vida activa.
-            </div>
-            <div class="slot-tags">
-              <span class="slot-tag slot-tag--propia">Producción propia</span>
-              <span class="slot-tag">Magazine</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="slot">
-          <div class="slot-time">12:00 – 14:30</div>
-          <div class="slot-content">
-            <div class="slot-title">Cine Familiar de Sábado</div>
-            <div class="slot-desc">
-              Clásicos familiares, comedias suaves y cine accesible para todas las edades.
-            </div>
-            <div class="slot-tags">
-              <span class="slot-tag slot-tag--adq">Adquisiciones</span>
-              <span class="slot-tag">Cine familiar</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="slot">
-          <div class="slot-time">14:30 – 15:00</div>
-          <div class="slot-content">
-            <div class="slot-title">El Noticiario de VOSTRA – Sábado</div>
-            <div class="slot-desc">
-              Resumen informativo de la jornada.
-            </div>
-            <div class="slot-tags">
-              <span class="slot-tag slot-tag--propia">Producción propia</span>
-              <span class="slot-tag">Informativo</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="slot">
-          <div class="slot-time">15:00 – 16:30</div>
-          <div class="slot-content">
-            <div class="slot-title">Sábado de Western</div>
-            <div class="slot-desc">
-              Un western clásico semanal, muy valorado por el público senior.
-            </div>
-            <div class="slot-tags">
-              <span class="slot-tag slot-tag--adq">Adquisiciones</span>
-              <span class="slot-tag">Western</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="slot">
-          <div class="slot-time">16:30 – 18:00</div>
-          <div class="slot-content">
-            <div class="slot-title">España Paso a Paso</div>
-            <div class="slot-desc">
-              Documental de territorio sobre rutas tranquilas, patrimonio y paisajes accesibles.
-            </div>
-            <div class="slot-tags">
-              <span class="slot-tag slot-tag--propia">Producción propia</span>
-              <span class="slot-tag">Documental</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="slot">
-          <div class="slot-time">18:00 – 20:00</div>
-          <div class="slot-content">
-            <div class="slot-title">Vuestra Historia</div>
-            <div class="slot-desc">
-              Historias reales, memoria oral y testimonios de personas mayores.
-            </div>
-            <div class="slot-tags">
-              <span class="slot-tag slot-tag--propia">Producción propia</span>
-              <span class="slot-tag">Factual</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="slot">
-          <div class="slot-time">20:00 – 21:00</div>
-          <div class="slot-content">
-            <div class="slot-title">La Hora VOSTRA – Fin de Semana</div>
-            <div class="slot-desc">
-              Reportajes ligeros y actualidad amable antes del prime time.
-            </div>
-            <div class="slot-tags">
-              <span class="slot-tag slot-tag--propia">Producción propia</span>
-              <span class="slot-tag">Access</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="slot">
-          <div class="slot-time">21:00 – 23:30</div>
-          <div class="slot-content">
-            <div class="slot-title">Cine Estelar de Sábado</div>
-            <div class="slot-desc">
-              La gran película de la semana: cine clásico de prestigio o restauraciones emblemáticas.
-            </div>
-            <div class="slot-tags">
-              <span class="slot-tag slot-tag--adq">Adquisiciones</span>
-              <span class="slot-tag">Cine estelar</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="slot">
-          <div class="slot-time">23:30 – 00:30</div>
-          <div class="slot-content">
-            <div class="slot-title">Concierto Íntimo</div>
-            <div class="slot-desc">
-              Recitales acústicos y conciertos pequeños de archivo.
-            </div>
-            <div class="slot-tags">
-              <span class="slot-tag slot-tag--adq">Adquisiciones</span>
-              <span class="slot-tag">Música</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- DOMINGO -->
-      <div class="parrilla-dia" id="parrilla-domingo" role="tabpanel">
-        <h2 class="parrilla-dia-title">Domingo</h2>
-
-        <div class="slot">
-          <div class="slot-time">06:00 – 09:00</div>
-          <div class="slot-content">
-            <div class="slot-title">Clásicos Musicales VOSTRA</div>
-            <div class="slot-desc">
-              Música clásica, zarzuela, copla y archivo musical restaurado.
-            </div>
-            <div class="slot-tags">
-              <span class="slot-tag slot-tag--adq">Adquisiciones</span>
-              <span class="slot-tag">Música</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="slot">
-          <div class="slot-time">09:00 – 11:00</div>
-          <div class="slot-content">
-            <div class="slot-title">Domingo en Conexión</div>
-            <div class="slot-desc">
-              Magazine suave de actualidad positiva, bienestar, lectura y vida familiar.
-            </div>
-            <div class="slot-tags">
-              <span class="slot-tag slot-tag--propia">Producción propia</span>
-              <span class="slot-tag">Magazine</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="slot">
-          <div class="slot-time">11:00 – 14:30</div>
-          <div class="slot-content">
-            <div class="slot-title">Maratón de Series Históricas</div>
-            <div class="slot-desc">
-              Tres capítulos de series históricas clásicas para consumo relajado.
-            </div>
-            <div class="slot-tags">
-              <span class="slot-tag slot-tag--adq">Adquisiciones</span>
-              <span class="slot-tag">Series</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="slot">
-          <div class="slot-time">14:30 – 15:00</div>
-          <div class="slot-content">
-            <div class="slot-title">El Noticiario de VOSTRA – Domingo</div>
-            <div class="slot-desc">
-              Informativo de cierre de semana.
-            </div>
-            <div class="slot-tags">
-              <span class="slot-tag slot-tag--propia">Producción propia</span>
-              <span class="slot-tag">Informativo</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="slot">
-          <div class="slot-time">15:00 – 17:00</div>
-          <div class="slot-content">
-            <div class="slot-title">Cine Nostalgia: Décadas que Nos Marcaron</div>
-            <div class="slot-desc">
-              Películas por décadas (50, 60, 70) para activar la memoria emocional.
-            </div>
-            <div class="slot-tags">
-              <span class="slot-tag slot-tag--adq">Adquisiciones</span>
-              <span class="slot-tag">Cine clásico</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="slot">
-          <div class="slot-time">17:00 – 19:00</div>
-          <div class="slot-content">
-            <div class="slot-title">Grandes Personajes de España</div>
-            <div class="slot-desc">
-              Biográficos accesibles de figuras culturales, sociales o históricas relevantes.
-            </div>
-            <div class="slot-tags">
-              <span class="slot-tag slot-tag--mixto">Mixto</span>
-              <span class="slot-tag">Documental</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="slot">
-          <div class="slot-time">19:00 – 20:00</div>
-          <div class="slot-content">
-            <div class="slot-title">Especial Comunidad</div>
-            <div class="slot-desc">
-              Reportajes sobre convivencia, redes de barrio y proyectos solidarios.
-            </div>
-            <div class="slot-tags">
-              <span class="slot-tag slot-tag--propia">Producción propia</span>
-              <span class="slot-tag">Comunidad</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="slot">
-          <div class="slot-time">20:00 – 21:00</div>
-          <div class="slot-content">
-            <div class="slot-title">La Hora VOSTRA – Domingo</div>
-            <div class="slot-desc">
-              Contenidos amables y culturales antes del evento principal del día.
-            </div>
-            <div class="slot-tags">
-              <span class="slot-tag slot-tag--propia">Producción propia</span>
-              <span class="slot-tag">Access</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="slot">
-          <div class="slot-time">21:00 – 23:00</div>
-          <div class="slot-content">
-            <div class="slot-title">Especial Premium Domingo</div>
-            <div class="slot-desc">
-              Documentales de prestigio, teatro grabado, conciertos especiales o eventos culturales relevantes.
-            </div>
-            <div class="slot-tags">
-              <span class="slot-tag slot-tag--mixto">Mixto</span>
-              <span class="slot-tag">Premium</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="slot">
-          <div class="slot-time">23:00 – 00:30</div>
-          <div class="slot-content">
-            <div class="slot-title">Fonoteca Nocturna</div>
-            <div class="slot-desc">
-              Selección musical calmada para cerrar la semana.
-            </div>
-            <div class="slot-tags">
-              <span class="slot-tag slot-tag--adq">Adquisiciones</span>
-              <span class="slot-tag">Música</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </section>
   </main>
 
   <!-- FOOTER -->
@@ -552,36 +152,8 @@
       <a href="#">Ajustes</a>
     </div>
   </footer>
+
 </div>
-
-<script>
-  const tabs = document.querySelectorAll('.day-tab');
-  const panels = {
-    laborables: document.getElementById('parrilla-laborables'),
-    sabado: document.getElementById('parrilla-sabado'),
-    domingo: document.getElementById('parrilla-domingo')
-  };
-
-  tabs.forEach(tab => {
-    tab.addEventListener('click', () => {
-      const day = tab.getAttribute('data-day');
-
-      tabs.forEach(t => {
-        t.classList.remove('active');
-        t.setAttribute('aria-selected', 'false');
-      });
-
-      tab.classList.add('active');
-      tab.setAttribute('aria-selected', 'true');
-
-      Object.keys(panels).forEach(key => {
-        panels[key].classList.remove('active');
-      });
-
-      panels[day].classList.add('active');
-    });
-  });
-</script>
 
 </body>
 </html>
