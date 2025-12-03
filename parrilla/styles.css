@@ -41,7 +41,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 14px 28px;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.45);
   backdrop-filter: blur(14px);
 }
 
@@ -129,27 +129,34 @@ button:focus {
 .guia-subtitle {
   font-size: 18px;
   color: #e0e7ff;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
+}
+
+/* PANEL DE LA TABLA (tarjeta grande, minimal) */
+.guia-container {
+  margin-top: 8px;
+  padding: 18px 22px 22px;
+  border-radius: 24px;
+  background: rgba(4, 9, 30, 0.92);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.7);
+  overflow-x: auto;
 }
 
 /* TABLA */
-.guia-container {
-  overflow-x: auto;
-  padding-bottom: 18px;
-}
-
 .guia-table {
   width: 100%;
-  border-collapse: collapse;
+  border-collapse: separate;
+  border-spacing: 0 10px; /* espacio entre filas */
 }
 
-.guia-table thead {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+.guia-table thead tr th {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+  padding-bottom: 10px;
 }
 
 .guia-table th,
 .guia-table td {
-  padding: 10px 6px;
+  padding: 4px 10px;
   text-align: left;
   font-size: 16px;
   vertical-align: top;
@@ -158,22 +165,24 @@ button:focus {
 .guia-table th {
   font-weight: 600;
   font-size: 17px;
+  color: #f4f6ff;
 }
 
 .hora {
   width: 150px;
   font-weight: 600;
-  color: #e3ecff;
+  color: #f7f8ff;
+  white-space: nowrap;
 }
 
-/* líneas suaves */
-.guia-table tbody tr:not(:last-child) td {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+/* sin líneas extra en el cuerpo, solo el espacio vertical */
+.guia-table tbody tr td {
+  border: none;
 }
 
-/* BOTONES DE PROGRAMA – ESTILO TEXTO */
+/* PROGRAMAS – SUPER LEGIBLES */
 .prog-btn {
-  display: inline;
+  display: block;              /* cada programa en su línea */
   border: none;
   background: transparent;
   color: #ffffff;
@@ -182,32 +191,34 @@ button:focus {
   text-align: left;
   padding: 0;
   cursor: pointer;
-  margin: 0;
+  margin: 0 0 3px;
+  line-height: 1.35;
 }
 
 .prog-btn:hover {
   text-decoration: underline;
 }
 
-/* ORIGEN (minimal) */
+/* ORIGEN (minimal pero muy visible) */
 .pill {
-  font-size: 13px;
+  font-size: 12px;
   text-transform: uppercase;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.08em;
   margin-left: 6px;
-  opacity: 0.8;
+  font-weight: 600;
+  opacity: 0.95;
 }
 
 .pill-propia {
-  color: #8ef0b0;
+  color: #7ae8a2;
 }
 
 .pill-adq {
-  color: #ffd199;
+  color: #ffd6a0;
 }
 
 .pill-mixto {
-  color: #c4c8ff;
+  color: #c9ccff;
 }
 
 /* MODAL POP-UP */
@@ -235,6 +246,7 @@ button:focus {
 .modal-title {
   font-size: 22px;
   margin: 0 0 6px;
+  font-weight: 600;
 }
 
 .modal-origen {
@@ -297,10 +309,14 @@ button:focus {
     padding-inline: 0;
   }
 
+  .guia-container {
+    padding: 14px 14px 18px;
+  }
+
   .guia-table th,
   .guia-table td {
     font-size: 14px;
-    padding: 8px 4px;
+    padding: 3px 6px;
   }
 
   .hora {
