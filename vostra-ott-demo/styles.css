@@ -8,11 +8,10 @@
   --font-main: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
+/* RESET */
 *,
 *::before,
-*::after {
-  box-sizing: border-box;
-}
+*::after { box-sizing: border-box; }
 
 html, body {
   margin: 0;
@@ -23,6 +22,7 @@ html, body {
   font-family: var(--font-main);
 }
 
+/* CONTENEDOR */
 .app {
   width: 100%;
   max-width: 1280px;
@@ -46,42 +46,21 @@ html, body {
   z-index: 20;
 }
 
-.topbar-left {
-  display: flex;
-  align-items: center;
-  gap: 30px;
-}
+.logo-img { height: 32px; }
 
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.logo-img {
-  height: 32px;
-  width: auto;
-}
-
-.logo-text {
-  font-size: 17px;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-}
-
+/* NAV */
 .nav {
   display: flex;
   gap: 18px;
 }
 
 .nav-link {
-  text-decoration: none;
   color: #d4e0ff;
-  font-size: 14px;
-  font-weight: 500;
+  text-decoration: none;
   padding-bottom: 4px;
   border-bottom: 2px solid transparent;
   transition: 0.25s;
+  font-weight: 500;
 }
 
 .nav-link--active {
@@ -89,23 +68,15 @@ html, body {
   border-bottom-color: #fff;
 }
 
-.nav-link:hover {
-  color: #fff;
-}
-
-.topbar-right {
-  display: flex;
-  gap: 8px;
-}
-
+/* ICONOS */
 .icon-btn {
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(255, 255, 255, 0.15);
   border: none;
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  color: white;
   cursor: pointer;
+  color: white;
 }
 
 /* MAIN */
@@ -123,21 +94,27 @@ html, body {
   overflow: hidden;
   min-height: 260px;
   margin-bottom: 28px;
-  /* HERO sin foto random: solo degradado corporativo */
-  background: linear-gradient(
-    135deg,
-    #050814 0%,
-    #0a43d8 40%,
-    #2e5fae 100%
-  );
+
+  /* FOTO REAL DE RESIDENCIA */
+  background-image: url("https://images.pexels.com/photos/7551676/pexels-photo-7551676.jpeg");
+  background-size: cover;
+  background-position: center;
   box-shadow: var(--shadow-soft);
 }
 
 .hero-gradient {
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at 70% 50%, rgba(255,255,255,0.1), transparent 60%);
+  background: linear-gradient(
+    90deg,
+    rgba(5, 8, 20, 0.9),
+    rgba(5, 8, 20, 0.7),
+    rgba(5, 8, 20, 0.4),
+    rgba(5, 8, 20, 0)
+  );
 }
+
+/* TEXTOS HERO */
 
 .hero-content {
   position: relative;
@@ -153,37 +130,30 @@ html, body {
 
 .hero-subtitle {
   font-size: 16px;
-  margin: 0 0 22px;
   color: #e4e9ff;
-}
-
-.hero-actions {
-  display: flex;
-  gap: 12px;
+  margin-bottom: 22px;
 }
 
 .hero-small-btn {
   position: absolute;
   right: 28px;
   bottom: 24px;
-  border-radius: 999px;
   border: 1px solid #fff;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.4);
   padding: 8px 16px;
-  color: #fff;
-  cursor: pointer;
+  border-radius: 999px;
   font-size: 13px;
+  color: #fff;
 }
 
 /* BOTONES */
-
 .btn {
   border: none;
   padding: 10px 22px;
   border-radius: 999px;
   font-size: 15px;
-  cursor: pointer;
   font-weight: 600;
+  cursor: pointer;
 }
 
 .btn-primary {
@@ -199,9 +169,7 @@ html, body {
 
 /* ROWS */
 
-.row {
-  margin-bottom: 30px;
-}
+.row { margin-bottom: 32px; }
 
 .row-title {
   font-size: 18px;
@@ -209,30 +177,30 @@ html, body {
   font-weight: 600;
 }
 
+/* GRID DE TARJETAS */
+
 .row-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
-  gap: 16px;
+  gap: 18px;
 }
 
-/* CARDS */
+/* TARJETAS */
 
 .card {
   border-radius: var(--radius-card);
   overflow: hidden;
-  background: transparent;
-  min-height: 160px;
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
 }
 
 .card-thumb {
   position: relative;
   height: 130px;
-  display: flex;
-  align-items: flex-end;
+  background-size: cover;
+  background-position: center;
 }
 
-/* degradado común abajo para los textos */
+/* DEGRADADO PARA TEXTO */
 
 .card-thumb::before {
   content: "";
@@ -240,21 +208,20 @@ html, body {
   inset: 0;
   background: linear-gradient(
     to top,
-    rgba(2, 6, 23, 0.95),
-    rgba(2, 6, 23, 0.6) 40%,
-    rgba(2, 6, 23, 0.1) 100%
+    rgba(0, 0, 0, 0.9),
+    rgba(0, 0, 0, 0.4),
+    rgba(0, 0, 0, 0)
   );
 }
 
 .card-info {
-  position: relative;
   padding: 12px;
+  position: relative;
 }
 
 .card-title {
   margin: 0 0 2px;
   font-size: 14px;
-  font-weight: 600;
 }
 
 .card-meta {
@@ -263,38 +230,61 @@ html, body {
   color: #d0dcff;
 }
 
-/* “PALETAS” POR TIPO DE PROGRAMA EN VEZ DE FOTOS RANDOM */
+/* 📸📸📸 IMÁGENES DEFINITIVAS (todas coherentes) */
 
-/* Magazine / compañía */
-.thumb-buenos-dias,
-.thumb-cuentos,
-.thumb-partida,
-.thumb-encuentro {
-  background: linear-gradient(135deg, #1cb5e0, #0a43d8);
+/* Magazine */
+.thumb-buenos-dias {
+  background-image: url("https://images.pexels.com/photos/7551674/pexels-photo-7551674.jpeg");
 }
 
-/* Informativo / institucional */
+/* Informativo */
 .thumb-informativo {
-  background: linear-gradient(135deg, #0f172a, #1e3a8a);
+  background-image: url("https://images.pexels.com/photos/277390/pexels-photo-277390.jpeg");
 }
 
-/* Ficción / series */
-.thumb-residencia,
+/* Ficción – La Residencia */
+.thumb-residencia {
+  background-image: url("https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg");
+}
+
+/* Talent Show */
 .thumb-talento {
-  background: linear-gradient(135deg, #7c3aed, #db2777);
+  background-image: url("https://images.pexels.com/photos/1647123/pexels-photo-1647123.jpeg");
 }
 
-/* Salud / ejercicio */
+/* Compañía */
+.thumb-cuentos {
+  background-image: url("https://images.pexels.com/photos/6787341/pexels-photo-6787341.jpeg");
+}
+
+.thumb-partida {
+  background-image: url("https://images.pexels.com/photos/5920777/pexels-photo-5920777.jpeg");
+}
+
+.thumb-encuentro {
+  background-image: url("https://images.pexels.com/photos/7551683/pexels-photo-7551683.jpeg");
+}
+
+/* Salud */
 .thumb-ejercicio {
-  background: linear-gradient(135deg, #16a34a, #0f766e);
+  background-image: url("https://images.pexels.com/photos/2791783/pexels-photo-2791783.jpeg");
 }
 
-/* Cine / nostalgia */
-.thumb-casablanca,
-.thumb-cine-recuerdo,
-.thumb-cine-nostalgia,
+/* Cine clásico */
+.thumb-casablanca {
+  background-image: url("https://images.pexels.com/photos/7991374/pexels-photo-7991374.jpeg");
+}
+
+.thumb-cine-recuerdo {
+  background-image: url("https://images.pexels.com/photos/7991445/pexels-photo-7991445.jpeg");
+}
+
+.thumb-cine-nostalgia {
+  background-image: url("https://images.pexels.com/photos/7991579/pexels-photo-7991579.jpeg");
+}
+
 .thumb-otrocine {
-  background: linear-gradient(135deg, #f59e0b, #b45309);
+  background-image: url("https://images.pexels.com/photos/7991520/pexels-photo-7991520.jpeg");
 }
 
 /* FOOTER */
@@ -313,30 +303,4 @@ html, body {
   margin-left: 12px;
 }
 
-.footer-right a:hover {
-  text-decoration: underline;
-}
-
-/* RESPONSIVE */
-
-@media (max-width: 900px) {
-  .nav {
-    display: none;
-  }
-
-  .topbar {
-    padding-inline: 16px;
-  }
-
-  .main {
-    padding-inline: 16px;
-  }
-
-  .hero-content {
-    padding: 24px 20px;
-  }
-
-  .hero-title {
-    font-size: 28px;
-  }
-}
+.footer-right a:hover { text-decoration: underline; }
