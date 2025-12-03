@@ -25,7 +25,6 @@ body {
 }
 
 /* CONTENEDOR PRINCIPAL */
-
 .app {
   width: 100%;
   max-width: 1200px;
@@ -37,7 +36,6 @@ body {
 }
 
 /* TOPBAR */
-
 .topbar {
   display: flex;
   justify-content: space-between;
@@ -105,7 +103,6 @@ body {
 }
 
 /* FOCUS ACCESIBLE */
-
 a:focus,
 button:focus {
   outline: 3px solid #ffffff;
@@ -113,7 +110,6 @@ button:focus {
 }
 
 /* MAIN */
-
 .main {
   padding: 28px 28px 40px;
   flex: 1;
@@ -137,7 +133,6 @@ button:focus {
 }
 
 /* TABLA */
-
 .guia-container {
   overflow-x: auto;
   padding-bottom: 18px;
@@ -166,42 +161,34 @@ button:focus {
 }
 
 .hora {
-  width: 140px;
+  width: 150px;
   font-weight: 600;
   color: #e3ecff;
 }
 
-/* Separadores horizontales muy suaves */
+/* líneas suaves */
 .guia-table tbody tr:not(:last-child) td {
   border-bottom: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 /* BOTONES DE PROGRAMA – ESTILO TEXTO */
-
 .prog-btn {
-  display: inline;
+  display: inline-block;
   border: none;
   background: transparent;
   color: #ffffff;
   font-family: inherit;
   font-size: 16px;
   text-align: left;
-  padding: 0;
+  padding: 3px 0;
   cursor: pointer;
-  margin: 0;
 }
 
 .prog-btn:hover {
   text-decoration: underline;
 }
 
-.prog-btn--active {
-  text-decoration: underline;
-  font-weight: 600;
-}
-
-/* ORIGEN (minimal, sin cajas) */
-
+/* ORIGEN (minimal) */
 .pill {
   font-size: 13px;
   text-transform: uppercase;
@@ -222,44 +209,54 @@ button:focus {
   color: #c4c8ff;
 }
 
-/* PANEL DETALLE */
-
-.detalle {
-  margin-top: 30px;
-  padding-top: 18px;
-  border-top: 1px solid rgba(255, 255, 255, 0.35);
+/* MODAL (POPUP) */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
 }
 
-.detalle-title {
+.modal {
+  position: relative;
+  background: #050814;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  padding: 24px 28px;
+  max-width: 480px;
+  width: 90%;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.7);
+}
+
+.modal-title {
   font-size: 24px;
-  margin: 0 0 10px;
-}
-
-.detalle-empty {
-  margin: 0;
-  font-size: 16px;
-  color: #c5cff5;
-}
-
-.detalle-card {
-  margin-top: 4px;
-}
-
-.detalle-programa {
-  font-size: 20px;
-  font-weight: 600;
   margin: 0 0 6px;
+  font-weight: 600;
 }
 
-.detalle-origen {
+.modal-origen {
   font-size: 15px;
   color: #c5cff5;
   margin: 0 0 10px;
 }
 
-.detalle-desc {
+.modal-desc {
   font-size: 16px;
-  margin: 0;
+  margin-top: 4px;
+}
+
+.modal-close {
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  border: none;
+  background: transparent;
+  color: #ffffff;
+  font-size: 22px;
+  cursor: pointer;
 }
 
 .hidden {
@@ -267,7 +264,6 @@ button:focus {
 }
 
 /* FOOTER */
-
 .footer {
   padding: 14px 28px 20px;
   display: flex;
@@ -287,7 +283,6 @@ button:focus {
 }
 
 /* RESPONSIVE */
-
 @media (max-width: 800px) {
   .nav {
     display: none;
@@ -308,6 +303,6 @@ button:focus {
   }
 
   .hora {
-    width: 110px;
+    width: 120px;
   }
 }
